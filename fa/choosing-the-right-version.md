@@ -2,7 +2,7 @@
 title: کدام نسخه از پارچ لینوکس برای من مناسب است؟
 description: این ویکی رسمی برای پارچ لینوکس است.
 published: true
-date: 2024-05-07T15:38:09.769Z
+date: 2025-02-27T17:47:51.385Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-07T15:31:48.197Z
