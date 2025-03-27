@@ -2,7 +2,7 @@
 title: Debian im Parch Linux
 description: Eine Anleitung zur Nutzung von Debian unter Parch Linux
 published: true
-date: 2025-03-27T11:59:41.292Z
+date: 2025-03-27T12:00:04.081Z
 tags: debian, parch
 editor: markdown
 dateCreated: 2024-10-18T07:33:24.452Z
