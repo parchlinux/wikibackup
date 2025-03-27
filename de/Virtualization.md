@@ -2,7 +2,7 @@
 title: Virtualisierung auf Parch Linux
 description: Die Virtualisierung erstellt eine virtuelle Maschine, die ein Betriebssystem enthält, das in Ihrem Hauptsystem funktioniert.
 published: true
-date: 2025-03-27T12:44:00.864Z
+date: 2025-03-27T13:07:20.259Z
 tags: parch, virtual, virtualization
 editor: markdown
 dateCreated: 2025-03-27T12:44:00.864Z
@@ -24,7 +24,7 @@ Obwohl du frei bist, welche Client-Software du verwenden möchtest zu wählen, e
 
 > Boxes ist eine Anwendung, die Ihnen Zugang zu virtuellen Maschinen gewährleistet, die lokal oder entfernt betrieben werden. Die Anwendung ermöglicht es Ihnen auch, sich mit dem Bildschirm eines entfernten Computers zu verbinden.
 
-### Installation Boxes
+### Installieren Boxes
 
 Das Installieren von Boxen auf Parch ist wie Alphabet einfach. Alles, was Sie tun müssen, ist, `sudo pacman -S gnome-boxes` in Ihrem Terminal auszuführen und anschließend neu zu starten. Boxes werden nach dem Booten ihres Computers sichtbar sein.
 
@@ -33,30 +33,31 @@ Das Installieren von Boxen auf Parch ist wie Alphabet einfach. Alles, was Sie tu
 > VirtualBox ist ein leistungsfähiges x86- und AMD64/Intel64-Virtualisierungsprodukt für Unternehmen sowie den privaten Gebrauch. Nicht nur ist VirtualBox ein extrem üppig ausgestattetes, hoch leistungsfähiges Produkt für Unternehmenskunden, es ist auch die einzige professionelle Lösung, die als quelloffene Software unter den Bedingungen der GNU General Public License (GPL) Version 3 frei verfügbar ist.
 
 
-### Installing VirtualBox
+### Installieren VirtualBox
 
-You can install the core package of VirtualBox by running sudo pacman -S virtualbox.
+Sie können das Kernpaket von VirtualBox installieren, indem Sie `sudo pacman -S virtualbox` ausführen.
 
-Next, you should run sudo pacman -S virtualbox-host-dkms. 
+Als nächstes solltest du `sudo pacman -S virtualbox-host-dkms` ausführen.
 
-To compile the VirtualBox modules provided by virtualbox-host-dkms, you'll also need to to install the appropriate headers packages for your installed kernel, for example:
+Um die von [virtualbox-host-dkms](https://archlinux.org/packages/?name=virtualbox-host-dkms) bereitgestellten VirtualBox-Module zu kompilieren, benötigen Sie außerdem die passenden Header-Pakete für Ihren installierten Kernel, z. B.:
 
-sudo pacman -S linux-headers for Linux kernel
-sudo pacman -S linux-lts-headers for Linux-LTS kernel
-sudo pacman -S linux-zen-headers for Linux-ZEN kernel
-sudo pacman -S linux-hardened-headers for Linux-HARDENED kernel
+`sudo pacman -S linux-header` für Linux kernel
+`sudo pacman -S linux-lts-headers` für Linux-LTS kernel
+`sudo pacman -S linux-zen-headers` für Linux-ZEN kernel
+`sudo pacman -S linux-hardened-headers` für Linux-HARDENED kernel
 
-Don't forget to reboot after installing.
+Vergessen Sie nicht, nach der Installation neu zu starten.
 
-Enabling additional features of VirtualBox
+### Aktivieren Sie zusätzliche Funktionen von VirtualBox
 
-The Oracle VirtualBox Extension Pack provides additional features and is released under a non-free license only available for personal use. To install it, the virtualbox-ext-oracleAUR package is available.
+> Das Oracle VirtualBox Extension Pack enthält [zusätzliche Funktionen](https://www.virtualbox.org/manual/ch01.html#intro-installing) und wird lediglich für den persönlichen Einsatz unter einer nicht freien Lizenz veröffentlicht. Um es zu installieren, steht das Paket [virtualbox-ext-oracle](https://aur.archlinux.org/packages/virtualbox-ext-oracle/)AUR zur Verfügung.
 
-For some reasons, additional features on VirtualBox (e.g. mounting an external media device like an USB stick to the guest) are not included in the core package and you need to install the extension pack to use these features.
+Aus irgendwelchen Gründen sind zusätzliche Funktionen in VirtualBox (z. B. das Mounten eines externen Medien Geräts wie einer USB-Stick im Gast) nicht im Kernpaket enthalten, und Sie müssen das Erweiterungspaket installieren, um diese Funktionen zu nutzen.
 
-You can install this package and use these features by: 
+Sie können dieses Paket installieren und diese Funktionen verwenden nach:
 
-Running paru -S virtualbox-ext-oracle --noconfirm on your terminal. (paru comes included by default in Parch Linux, but you may want to use yay or aura instead.)
-Running sudo usermod -aG vboxusers YOUR-USERNAME on your terminal. (Put your username instead of YOUR-USERNAME in the command.)
+1. Führen Sie den Befehl `paru -S virtualbox-ext-oracle --noconfirm` im Terminal aus. (`Paru` ist standardmäßig in Parch Linux enthalten, aber Sie können stattdessen `yay` oder `aura` verwenden.)
 
-At the end, don't forget to reboot, since it is necessary.
+2. Führen Sie den Befehl `sudo usermod -aG vboxusers YOUR-USERNAME` im Terminal aus. (Ersetzen Sie `YOUR-USERNAME` im Befehl durch Ihren Benutzernamen.)
+
+Vergessen Sie am Ende nicht zum Neustart, da dies notwendig ist.
