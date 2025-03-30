@@ -2,7 +2,7 @@
 title: Gaming on Parch Linux
 description: A simple Guide about Gaming on Parch Linux
 published: true
-date: 2024-05-28T21:50:04.279Z
+date: 2025-03-30T17:48:34.701Z
 tags: game, parchlinux, gaming, linux
 editor: markdown
 dateCreated: 2024-05-16T17:56:46.186Z
@@ -155,7 +155,7 @@ An all-in-one application for installing and running Windows and Linux games on 
 2. Go to the Launch Options section.
 3. In the text box, enter gamemoderun %command%.
 
-> With this guide, you should be able to take advantage of the powerful gaming tools on ParchLinux for installing and playing games seamlessly. Refer to the official documentation for each tool if you need further information.
+> This guide will help you take advantage of ParchLinux's powerful gaming tools, allowing for seamless installation and gameplay. For more details on each tool, please refer to the official documentation
 > 
 {.is-success}
 
