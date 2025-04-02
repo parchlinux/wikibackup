@@ -1,8 +1,8 @@
 ---
 title: گنوم
 description: 
-published: false
-date: 2024-11-21T18:24:57.561Z
+published: true
+date: 2025-04-02T19:53:41.215Z
 tags: پارچ, گنوم
 editor: markdown
 dateCreated: 2024-11-20T15:39:31.166Z
