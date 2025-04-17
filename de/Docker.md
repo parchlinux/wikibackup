@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2025-04-10T18:27:56.858Z
+date: 2025-04-17T14:06:05.656Z
 tags: docker
 editor: markdown
 dateCreated: 2025-04-10T18:27:56.858Z
@@ -86,48 +86,48 @@ docker run --name some-nginx -p 8080:80 -v /some/content:/usr/share/nginx/html:r
 docker run --name some-nginx -p 8080:80 -v /some/content:/usr/share/nginx/html:ro -d focker.ir/nginx
 ```
 
-1. The `--name` flag assigns a name to the container, in this example, `some-nginx`.
-2. The `-v` or `--volume` flag shares a (path on the host system) with (a path in the container).
+1. Die `--name` Option weist dem Container einen Namen zu, in diesem Beispiel `some-nginx`.
+2. Die `-v` oder `--volume` Flag teilt einen (Pfad im Hostsystem) mit (einem Pfad im Container).
 
-   > In this example, the path `/some/content` on the host system is shared with `/usr/share/nginx/html` in the container. For instance, if you create a file named `name.txt` in `/some/content` on the host system, you can find the same file in `/usr/share/nginx/html` within the container.
+   > Im diesem Beispiel wird der Pfad `/some/content` im Host-System mit `/usr/share/nginx/html` im Container gemeinsam genutzt. Wenn Sie beispielsweise eine Datei mit dem Namen `name.txt` im Pfad `/some/content` im Host-System erstellen, können Sie dieselbe Datei im Pfad `/usr/share/nginx/html` innerhalb des Containers finden.
 
-   > The `ro` at the end of the volume flag, separated by `:`, stands for read-only. If you set it to `rw`, it will be read and write.
+   > Das `ro` am Ende der Volume-Flag, getrennt durch `:`, steht für read-only. Wenn du es auf `rw` setzt, wird es les- und schreibbar.
 
-4. The `-p` or `--port` flag maps a port from the host system to a port in the container.
+4. Die `-p` oder `--port` Flag zuweist einen Port vom Hostsystem einem Port im Container.
 
-   > In this example, port `8080` on the host system is mapped to port `80` in the container.
+   > In diesem Beispiel wird Port `8080` auf dem Hostsystem auf Port `80` im Container abgebildet.
 
-3. The `-d` flag runs the process in the background.
+3. Die `-d`-Option führt den Prozess im Hintergrund aus.
 
-# Sanctions Workaround
+# Sanktionsarbeitumgehung
 
-To bypass sanctions, you can use the following methods:
+Um Sanktionen zu umgehen, können Sie die folgenden Methoden verwenden:
 
-1. Using DNS
-2. Using other mirrors
-3. Using proxy client tools such as [Hiddify](https://hiddify.com/) and [Nekoray](https://github.com/MatsuriDayo/nekoray).
+1. Mit DNS
+2. Mit anderen Spiegeln
+3. Mit Proxy-Client-Tools wie [Hiddify](https://hiddify.com/) und [Nekoray](https://github.com/MatsuriDayo/nekoray).
 
-## Using Other Mirrors
+## Mit anderen Spiegeln
 
-The simplest method to bypass sanctions is to download images from other repositories, such as focker.ir and ArvanCloud.
+Die einfachste Methode, um Sanktionen zu umgehen, besteht darin, Bilder aus anderen Repositories wie focker.ir und ArvanCloud herunterzuladen.
 
-ArvanCloud has published a [comprehensive guide](https://www.arvancloud.ir/fa/dev/docker) on this.
+ArvanCloud hat einen [umfassenden Leitfaden](https://www.arvancloud.ir/fa/dev/docker) dazu veröffentlicht.
 
-In summary, you can use the following command to download images from ArvanCloud:
+Zusammenfassend können Sie den folgenden Befehl verwenden, um Bilder von ArvanCloud herunterzuladen:
 
 ```
 docker pull docker.arvancloud.ir/<ImageName>
 ```
 
-Similarly, for focker.ir:
+Ähnlich verhält es sich bei focker.ir:
 
 ```
 docker pull focker.ir/<ImageName>
 ```
 
-## Using DNS
+## Mit DNS
 
-Several internal DNS services are available to bypass sanctions, including [Shecan](https://shecan.ir/), [403](https://403.online/), and [Begzar](https://begzar.ir/).
+Mehrere interne DNS-Dienste sind verfügbar, um Sanktionen zu umgehen, darunter [Shecan](https://shecan.ir/), [403](https://403.online/) und [Begzar](https://begzar.ir/).
 
 ### Begzar
 
@@ -155,59 +155,59 @@ Several internal DNS services are available to bypass sanctions, including [Shec
 
 # Docker Compose
 
-[Docker Compose](https://docs.docker.com/compose/) is one of Docker's most powerful tools, enabling you to define configurations for multiple containers in a single YAML file. This avoids the need to repeatedly type commands in the terminal or manually write scripts. Instead, you can run all the containers with a single command.
+[Docker Compose](https://docs.docker.com/compose/) ist eines der leistungsstärksten Tools von Docker und ermöglicht es Ihnen, Konfigurationen für mehrere Container in einer einzigen YAML-Datei zu definieren. Damit entfällt die Notwendigkeit, wiederholt Befehle im Terminal einzugeben oder Skripte manuell zu schreiben. Stattdessen können Sie alle Container mit einem einzigen Befehl starten.
 
-# Flags
+# Flaggen
 
-Docker provides a set of flags:
+Docker bietet eine Reihe von Flags:
 
 ### --help
 
-Displays usage information and commands for Docker.
+Zeigt Nutzungsinformationen und -befehle für Docker an.
 
 ### -D, --debug=true|false
 
-Enables or disables debug mode.
+Aktiviert oder deaktiviert den Debug Modus.
 
 ### -H, --host=[unix:///var/run/docker.sock]
 
-Specifies the socket address for the Docker service.
+Gibt die Socket Adresse für den Docker Dienst an.
 
 ### -l, --log-level=debug|info|warn|error|fatal
 
-Sets the log level (default is info).
+Legt die Protokollebene fest (Standardeinstellung ist Info).
 
 ### --tls=true|false
 
-Specifies whether to use TLS (default is false).
+Gibt an, ob TLS verwendet werden soll (Standard ist falsch).
 
 ### --tlscacert=~/.docker/ca.pem
 
-Ensures that the certificates are signed by the specified CA.
+Stellt sicher, dass die Zertifikate von der angegebenen CA unterzeichnet werden.
 
 ### --tlscert=~/.docker/cert.pem
 
-Specifies the client certificate file.
+Gibt die Client Zertifikatdatei an.
 
 ### --tlskey=~/.docker/key.pem
 
-Specifies the client key file.
+Gibt die Clientschlüsseldatei an.
 
 ### --tlsverify=true|false
 
-Enables TLS and verifies remote access.
+Aktiviert TLS und überprüft den Remote Zugriff.
 
 ### -v, --version=true|false
 
-Displays the current version of Docker.
+Zeigt die aktuelle Version von Docker an.
 
-## Commands
+## Befehle
 
-Use `docker --help` to review the list of available commands.
+Verwenden Sie `docker --help`, um die Liste der verfügbaren Befehle zu überprüfen.
 
 ### run
 
-Run a new container from an image.
+Erstellen Sie einen neuen Container aus einem Image.
 
 ```
 docker run hello-world
@@ -215,7 +215,7 @@ docker run hello-world
 
 ### exec
 
-Execute commands in a running container.
+Führe Befehle in einem laufenden Container aus.
 
 ```
 docker exec -it my_container bash
@@ -223,7 +223,7 @@ docker exec -it my_container bash
 
 ### ps
 
-List running containers.
+Listen Sie laufende Container auf.
 
 ```
 docker ps
@@ -231,7 +231,7 @@ docker ps
 
 ### build
 
-Build a Docker image from a Dockerfile.
+Erstellen Sie ein Docker-Bild aus einer Dockerfile.
 
 ```
 docker build -t my_image .
@@ -239,7 +239,7 @@ docker build -t my_image .
 
 ### pull
 
-Download an image from Docker Hub.
+Laden Sie ein Bild von Docker Hub herunter.
 
 ```
 docker pull nginx
@@ -247,7 +247,7 @@ docker pull nginx
 
 ### push
 
-Upload an image to Docker Hub.
+Laden Sie ein Bild in Docker Hub hoch.
 
 ```
 docker push focker.ir/my_image
@@ -255,7 +255,7 @@ docker push focker.ir/my_image
 
 ### images
 
-List available images.
+Listen Sie verfügbare Bilder auf.
 
 ```
 docker images
@@ -263,7 +263,7 @@ docker images
 
 ### login
 
-Log in to Docker Hub.
+Melden Sie sich bei Docker Hub an.
 
 ```
 docker login
@@ -271,7 +271,7 @@ docker login
 
 ### logout
 
-Log out of Docker Hub.
+Melden Sie sich von Docker Hub aus.
 
 ```
 docker logout
@@ -279,7 +279,7 @@ docker logout
 
 ### search
 
-Search for images on Docker Hub.
+Suche nach Bildern auf Docker Hub.
 
 ```
 docker search redis
@@ -287,7 +287,7 @@ docker search redis
 
 ### version
 
-Display the Docker version.
+Zeigen Sie die Docker-Version an.
 
 ```
 docker version
@@ -295,7 +295,7 @@ docker version
 
 ### info
 
-Display system-wide information.
+Systemweite Informationen anzeigen.
 
 ```
 docker info
@@ -303,7 +303,7 @@ docker info
 
 ### attach
 
-Attach to a running container.
+Befestigen Sie einen laufenden Behälter.
 
 ```
 docker attach my_container
@@ -311,7 +311,7 @@ docker attach my_container
 
 ### commit
 
-Create a new image from a container's changes.
+Erstellen Sie ein neues Bild aus den Änderungen eines Containers.
 
 ```
 docker commit my_container my_image
@@ -319,7 +319,7 @@ docker commit my_container my_image
 
 ### cp
 
-Copy files between a container and the host.
+Kopieren Sie Dateien zwischen einem Container und dem Host.
 
 ```
 docker cp my_container:/path/in/container /path/on/host
@@ -327,7 +327,7 @@ docker cp my_container:/path/in/container /path/on/host
 
 ### create
 
-Create a new container.
+Erstellen Sie einen neuen Container.
 
 ```
 docker create --name my_container ubuntu
@@ -335,7 +335,7 @@ docker create --name my_container ubuntu
 
 ### diff
 
-Inspect changes to files or directories on a container’s filesystem.
+Überprüfen Sie Änderungen an Dateien oder Verzeichnissen in einem Dateisystem eines Containers.
 
 ```
 docker diff my_container
@@ -343,7 +343,7 @@ docker diff my_container
 
 ### events
 
-Get real-time events from the Docker server.
+Holen Sie sich Echtzeit-Ereignisse vom Docker-Server.
 
 ```
 docker events
@@ -351,7 +351,7 @@ docker events
 
 ### export
 
-Export a container’s filesystem as a tar archive.
+Exportieren Sie das Dateisystem eines Containers als TAR -Archiv.
 
 ```
 docker export my_container -o my_container.tar
@@ -359,7 +359,7 @@ docker export my_container -o my_container.tar
 
 ### history
 
-Show the history of an image.
+Zeigen Sie die Geschichte eines Bildes.
 
 ```
 docker history ubuntu
@@ -367,14 +367,14 @@ docker history ubuntu
 
 ### import
 
-Create an image from a tarball.
+Erstellen Sie ein Bild aus einem Tarball.
 
 ```
 docker import my_container.tar my_image
 ```
 ### inspect
 
-Return low-level information on Docker objects.
+Geben Sie niedrigstufige Informationen zu Docker-Objekten zurück.
 
 ```
 docker inspect my_container
@@ -382,7 +382,7 @@ docker inspect my_container
 
 ### kill
 
-Kill a running container.
+Töte einen laufenden Behälter.
 
 ```
 docker kill my_container
@@ -390,7 +390,7 @@ docker kill my_container
 
 ### load
 
-Load an image from a tar archive.
+Laden Sie ein Bild aus einem Tar-Archiv.
 
 ```
 docker load -i my_image.tar
@@ -398,7 +398,7 @@ docker load -i my_image.tar
 
 ### logs
 
-Fetch the logs of a container.
+Abrufen Sie die Protokolle eines Behälters ab.
 
 ```
 docker logs my_container
@@ -406,7 +406,7 @@ docker logs my_container
 
 ### pause
 
-Pause all processes within one or more containers.
+Machen Sie alle Prozesse innerhalb eines oder mehrerer Container an.
 
 ```
 docker pause my_container
@@ -414,7 +414,7 @@ docker pause my_container
 
 ### port
 
-List port mappings or a specific mapping for the container.
+Listen Sie Port -Zuordnungen oder eine bestimmte Zuordnung für den Container auf.
 
 ```
 docker port my_container
@@ -422,7 +422,7 @@ docker port my_container
 
 ### rename
 
-Rename a container.
+Benennen Sie einen Container um.
 
 ```
 docker rename my_container new_container_name
@@ -430,7 +430,7 @@ docker rename my_container new_container_name
 
 ### restart
 
-Restart a container.
+Starten Sie einen Behälter neu.
 
 ```
 docker restart my_container
@@ -438,7 +438,7 @@ docker restart my_container
 
 ### rm
 
-Remove one or more containers.
+Entfernen Sie einen oder mehrere Behälter.
 
 ```
 docker rm my_container
@@ -446,7 +446,7 @@ docker rm my_container
 
 ### rmi
 
-Remove one or more images.
+Entfernen Sie ein oder mehrere Bilder.
 
 ```
 docker rmi my_image
@@ -454,7 +454,7 @@ docker rmi my_image
 
 ### save
 
-Save one or more images to a tar archive.
+Speichern Sie ein oder mehrere Bilder in einem Tar-Archiv.
 
 ```
 docker save -o my_image.tar my_image
@@ -462,7 +462,7 @@ docker save -o my_image.tar my_image
 
 ### start
 
-Start one or more stopped containers.
+Starten Sie einen oder mehrere gestoppte Behälter.
 
 ```
 docker start my_container
@@ -470,7 +470,7 @@ docker start my_container
 
 ### stats
 
-Display a live stream of container(s) resource usage statistics.
+Eine Live-Übertragung der Ressourcennutzungsstatistiken von Container(n) anzeigen.
 
 ```
 docker stats my_container
@@ -478,7 +478,7 @@ docker stats my_container
 
 ### stop
 
-Stop one or more running containers.
+Beenden Sie einen oder mehrere laufende Container.
 
 ```
 docker stop my_container
@@ -486,7 +486,7 @@ docker stop my_container
 
 ### tag
 
-Create a tag for an image.
+Erstellen Sie ein Tag für ein Bild.
 
 ```
 docker tag my_image my_repo/my_image:tag
@@ -494,7 +494,7 @@ docker tag my_image my_repo/my_image:tag
 
 ### top
 
-Display the running processes of a container.
+Zeigen Sie die laufenden Prozesse eines Containers an.
 
 ```
 docker top my_container
@@ -502,7 +502,7 @@ docker top my_container
 
 ### unpause
 
-Unpause all processes within one or more containers.
+Entpausiere alle Prozesse innerhalb eines oder mehrerer Container.
 
 ```
 docker unpause my_container
@@ -510,7 +510,7 @@ docker unpause my_container
 
 ### update
 
-Update configuration of one or more containers.
+Aktualisieren Sie die Konfiguration eines oder mehrerer Container.
 
 ```
 docker update --cpus=2 my_container
@@ -518,7 +518,7 @@ docker update --cpus=2 my_container
 
 ### wait
 
-Block until one or more containers stop, then print their exit codes.
+Warte, bis ein oder mehrere Container beendet werden, dann zeige ihre Exit-Codes an.
 
 ```
 docker wait my_container
