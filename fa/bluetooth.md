@@ -2,7 +2,7 @@
 title: بلوتوث
 description: 
 published: true
-date: 2025-04-25T16:55:29.717Z
+date: 2025-04-25T17:02:06.519Z
 tags: بلوتوث, bluetooth, pairing
 editor: markdown
 dateCreated: 2025-04-25T16:42:22.413Z
@@ -47,4 +47,53 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys
 #### استخراج در لینوکس
 >نکته: اگر پارتیشن ویندوز شما با Bitlocker رمزگذاری شده باشد، نمی‌توانید با استفاده از chntpw از لینوکس به آن دسترسی پیدا کنید. 
 {.is-info}
+
+پارچ را بوت کنید. chntpw را نصب کنید. درایو سیستم ویندوز خود را مانت کنید.
+```bash
+$ cd /path/to/windows/system/Windows/System32/config
+$ chntpw -e SYSTEM
+```
+داخل محیط chntpw، دستور زیر را اجرا کنید:
+```bash
+cd CurrentControlSet\Services\BTHPORT\Parameters\Keys
+```
+به جای CurrentControlSet، ممکن است ControlSet00X را ببینید (با استفاده از ls ​​بررسی کنید):
+```bash
+cd ControlSet00X\Services\BTHPORT\Parameters\Keys
+```
+سپس آدرس MAC آداپتور بلوتوث خود را دریافت کرده و وارد پوشه آن شوید.
+```bash
+ls
+cd your-device's-mac-address
+```
+همین کار را برای دستگاه‌های جفت‌شده خود انجام دهید. اگر این دستگاه بلوتوث ۵.۱ نباشد، فقط کلید جفت‌سازی را مشاهده خواهید کرد:
+```bash
+ls
+```
+```
+Node has 0 subkeys and 1 values
+size  type        value name    [value if type DWORD]
+16    REG_BINARY <123456789876>
+```
+اگر چنین است، کلید دستگاه خود را از طریق `Hex` دریافت کنید:
+```
+hex 123456789876
+```
+>:00000 XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX (some other chars)
+
+«XX» ها کلید جفت‌سازی هستند. توجه داشته باشید که کدام کلیدها به کدام آدرس‌های MAC مربوط می‌شوند.
+
+اگر این یک دستگاه بلوتوث ۵.۱ باشد، چندین کلید مربوط به یک دستگاه را خواهید دید.
+```
+Node has 0 subkeys and 8 values
+  size     type              value name             [value if type DWORD]
+    16  3 REG_BINARY         <LTK>
+     4  4 REG_DWORD          <KeyLength>               16 [0x10]
+     8  b REG_QWORD          <ERand>
+     4  4 REG_DWORD          <EDIV>                 37520 [0x9290]
+    16  3 REG_BINARY         <IRK>
+     8  b REG_QWORD          <Address>
+     4  4 REG_DWORD          <AddressType>              1 [0x1]
+     4  4 REG_DWORD          <AuthReq>                 45 [0x2d]
+```
 
