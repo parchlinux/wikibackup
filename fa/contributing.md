@@ -2,7 +2,7 @@
 title: مشارکت بر روی پروژه پارچ و پروژه‌های وابسته
 description: راهنمای نحوه مشارکت بر روی پارچ
 published: true
-date: 2024-09-28T18:42:03.602Z
+date: 2025-05-11T21:45:37.017Z
 tags: پارچ, مشارکت
 editor: markdown
 dateCreated: 2024-09-28T09:49:13.655Z
@@ -371,7 +371,9 @@ dateCreated: 2024-09-28T09:49:13.655Z
 
 **آدرس‌های مرتبط:**
 - **سایت رسمی پارچ:** [parchlinux.com](#)
-- **گروه تلگرام کاربران پارچ:** [t.me/parchlinux_fa](#)
+- **ویکی رسمی پارچ:** [wiki.parchlinux.com](#) 
 - **فروم رسمی کاربران پارچ:** [forum.parchlinux.com](#)
-- **گیت‌لب پارچ:** [git.parchlinux.com](#) 
+- **گیت پارچ:** [git.parchlinux.com](#)
+- **گروه تلگرام کاربران پارچ:** [t.me/parchlinux_fa](#)
+ 
 
