@@ -2,7 +2,7 @@
 title: خانه
 description: 
 published: true
-date: 2025-02-27T18:06:56.212Z
+date: 2025-05-30T09:15:55.336Z
 tags: 
 editor: markdown
 dateCreated: 2024-04-05T13:21:21.206Z
@@ -14,7 +14,7 @@ dateCreated: 2024-04-05T13:21:21.206Z
 
 
 
-برای مشارکت در تکمیل ویکی می‌توانید با رایانامه [behdanisohrab@riseup.net](mailto:behdanisohrab@riseup.net) در ارتباط باشید.
+برای مشارکت در تکمیل ویکی می‌توانید با رایانامه [parsa@anche.no](mailto:parsa@anche.no) در ارتباط باشید.
 
 ## شروع کنید
 |  **موضوع** |                        **توضیح کوتاه** |
