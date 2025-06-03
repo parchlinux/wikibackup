@@ -2,7 +2,7 @@
 title: (توابع)Bash Functions
 description: bash توابع رو هم پشتیبانی میکند.
 published: true
-date: 2025-06-03T19:35:02.053Z
+date: 2025-06-03T19:37:25.805Z
 tags: bash, bash script
 editor: ckeditor
 dateCreated: 2025-06-03T18:29:42.624Z
@@ -16,12 +16,11 @@ dateCreated: 2025-06-03T18:29:42.624Z
 <blockquote>
   <p>ارور کد: هر دستور بعد از اجرا و اتمام یک کد را خروجی میدهد که عدد 0 نشان دهنده انجام شدن هست اما اگر دستور به ارور بخورد عدد ۱ به بالا را میدهد که هر کدام برای هر دستور معنی خاصی دارند.</p>
 </blockquote>
-<p style="text-align:left;"><code>&lt;div style="text-align: left;"&gt;</code></p>
 <pre><code class="language-c">EC() {
 	echo -e '\e[1;33m'code $?'\e[m\n'
 }
 trap EC ERR</code></pre>
-<p style="text-align:left;"><code>&lt;/div&gt;</code></p>
+<p>&nbsp;</p>
 <h2>2 کامپایل و اجرای کد C&nbsp;</h2>
 <p>در این تابع کد شما رو کامپایل میکنه و فایل باینری رو در این مسیر temp/ ذخیره میکنه و بعد اجرا میکنه. و بعد از بسته شدن برنامه فایل کامپایل شده پاک میشه.</p>
 <pre><code class="language-c">csource() {
