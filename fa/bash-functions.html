@@ -2,7 +2,7 @@
 title: (توابع)Bash Functions
 description: bash توابع رو هم پشتیبانی میکند.
 published: true
-date: 2025-06-03T19:26:57.491Z
+date: 2025-06-03T19:33:33.677Z
 tags: bash, bash script
 editor: ckeditor
 dateCreated: 2025-06-03T18:29:42.624Z
@@ -16,11 +16,12 @@ dateCreated: 2025-06-03T18:29:42.624Z
 <blockquote>
   <p>ارور کد: هر دستور بعد از اجرا و اتمام یک کد را خروجی میدهد که عدد 0 نشان دهنده انجام شدن هست اما اگر دستور به ارور بخورد عدد ۱ به بالا را میدهد که هر کدام برای هر دستور معنی خاصی دارند.</p>
 </blockquote>
+<p style="text-align:left;">&lt;div style="text-align: left;"&gt;</p>
 <pre><code class="language-c">EC() {
 	echo -e '\e[1;33m'code $?'\e[m\n'
 }
 trap EC ERR</code></pre>
-<p>&nbsp;</p>
+<p style="text-align:left;">&lt;/div&gt;</p>
 <h2>2 کامپایل و اجرای کد C&nbsp;</h2>
 <p>در این تابع کد شما رو کامپایل میکنه و فایل باینری رو در این مسیر temp/ ذخیره میکنه و بعد اجرا میکنه. و بعد از بسته شدن برنامه فایل کامپایل شده پاک میشه.</p>
 <pre><code class="language-c">csource() {
@@ -69,9 +70,11 @@ trap EC ERR</code></pre>
     done
     return "$e"
 }</code></pre>
+<p>&nbsp;</p>
 <blockquote>
   <p>نکته: باید پکیج های ارشیو و فشرده سازی رو نصب داشته باشید.</p>
   <pre><code class="language-plaintext">pacman -S bzip2 gzip xz zstd tar 7zip unrar bsdtar</code></pre>
+  <p>&nbsp;</p>
 </blockquote>
 <h2>cd 4 و ls در یک دستور</h2>
 <p>برای مطمئن شدن از رفتن به یک دایرکتوری دیگر بعد از cd از دستور ls استفاده میکنیم در این تابع به ما کمک میکند که از یک دستور استفاده کنیم با این دستور cl مخفف change list و اگر دایرکتوری موجود نباشد با ارور مسیج مواجه میشویم</p>
@@ -86,6 +89,7 @@ trap EC ERR</code></pre>
 		echo "bash: cl: $dir: Directory not found"
 	fi
 }</code></pre>
+<p>&nbsp;</p>
 <blockquote>
   <p>نکته برای این که خروجی ls رنگی باشه در تابع جلوی دستور ls از اپشن color=auto-- اضافه کنید و برای دیدن جزئیات h- اضافه کنید.</p>
 </blockquote>
