@@ -2,7 +2,7 @@
 title: (توابع)Bash Functions
 description: bash توابع رو هم پشتیبانی میکند.
 published: false
-date: 2025-06-03T18:29:42.624Z
+date: 2025-06-03T19:09:15.350Z
 tags: bash, bash script
 editor: ckeditor
 dateCreated: 2025-06-03T18:29:42.624Z
@@ -31,4 +31,90 @@ trap EC ERR</code></pre>
 }</code></pre>
 <p>&nbsp;</p>
 <h2>3 استخراج فایل ها</h2>
-<p>این تابع استخراج میکنه هر نوع تایپ&nbsp;</p>
+<p>این تابع استخراج میکنه هر نوع فایل فشرده رو با دستور</p>
+<pre><code class="language-plaintext">extract &lt;file1&gt; &lt;file2&gt; ...</code></pre>
+<pre><code class="language-plaintext">extract() {
+    local c e i
+
+    (($#)) || return
+
+    for i; do
+        c=''
+        e=1
+
+        if [[ ! -r $i ]]; then
+            echo "$0: file is unreadable: \`$i'" &gt;&amp;2
+            continue
+        fi
+
+        case $i in
+            *.t@(gz|lz|xz|b@(2|z?(2))|a@(z|r?(.@(Z|bz?(2)|gz|lzma|xz|zst)))))
+                   c=(bsdtar xvf);;
+            *.7z)  c=(7z x);;
+            *.bz2) c=(bunzip2);;
+            *.gz)  c=(gunzip);;
+            *.rar) c=(unrar x);;
+            *.xz)  c=(unxz);;
+            *.zip) c=(unzip);;
+            *.zst) c=(unzstd);;
+            *)     echo "$0: unrecognized file extension: \`$i'" &gt;&amp;2
+                   continue;;
+        esac
+
+        command "${c[@]}" "$i"
+        ((e = e || $?))
+    done
+    return "$e"
+}</code></pre>
+<p>نکته: باید پکیج های ارشیو و فشرده سازی رو نصب داشته باشید.</p>
+<pre><code class="language-plaintext">pacman -S bzip2 gzip xz zstd tar 7zip unrar bsdtar</code></pre>
+<h2>cd ۴ و ls در یک دستور</h2>
+<p>برای مطمئن شدن از رفتن به یک دایرکتوری دیگر بعد از cd از دستور ls استفاده میکنیم در این تابع به ما کمک میکند که از یک دستور استفاده کنیم با این دستور cl مخفف change list و اگر دایرکتوری موجود نباشد با ارور مسیج مواجه میشویم</p>
+<pre><code class="language-plaintext">cl &lt;directory&gt;</code></pre>
+<pre><code class="language-plaintext">cl() {
+	local dir="$1"
+	local dir="${dir:=$HOME}"
+	if [[ -d "$dir" ]]; then
+		cd "$dir" &gt;/dev/null; ls
+	else
+		echo "bash: cl: $dir: Directory not found"
+	fi
+}</code></pre>
+<p>نکته برای این که خروجی ls رنگی باشه در تابع جلوی دستور ls از اپشن color=auto-- اضافه کنید و برای دیدن جزئیات h- اضافه کنید.</p>
+<p>&nbsp;</p>
+<h2>۵ یادداشت اسان</h2>
+<p>این تابع برای یادداشت استفاده میشه با استفاده از دستور note میتوانید یادداشت های خود رو ببینید با استفاده از note -c یادداشت هاتون رو پاک کنید و با دستور پایین یاداشت اضافه کنید.</p>
+<pre><code class="language-plaintext">note &lt;یادداشت شما&gt;</code></pre>
+<pre><code class="language-plaintext">note () {
+    # if file doesn't exist, create it
+    if [[ ! -f $HOME/.notes ]]; then
+        touch "$HOME/.notes"
+    fi
+
+    if ! (($#)); then
+        # no arguments, print file
+        cat "$HOME/.notes"
+    elif [[ "$1" == "-c" ]]; then
+        # clear file
+        printf "%s" &gt; "$HOME/.notes"
+    else
+        # add all arguments to file
+        printf "%s\n" "$*" &gt;&gt; "$HOME/.notes"
+    fi
+}</code></pre>
+<p>&nbsp;</p>
+<h2>۶ ماشین حساب</h2>
+<p>این تابع کمک میکنه عملیات های ریاضی انجام بدید مثل دستورات زیر:</p>
+<pre><code class="language-plaintext">calc 95+89
+calc 30/5
+calc 94+329-164-15</code></pre>
+<p>تابع:</p>
+<pre><code class="language-plaintext">calc() {
+    echo "scale=3;$@" | bc -l
+}</code></pre>
+<p>&nbsp;</p>
+<h2>۷ نمایش سایز</h2>
+<p>این تابع سایز دایرکتوری های مسیر / رو بهتون نشون میده و بر اساس سایز مرتبشون میکنه کافیه از دستور whatsize استفاده کنید.</p>
+<pre><code class="language-plaintext">whatsize(){
+    du -h --max-depth=1 --exclude=/{proc,sys,dev,run} -t 1 ${1:-/} 2&gt;/dev/null | sort -hr
+} </code></pre>
