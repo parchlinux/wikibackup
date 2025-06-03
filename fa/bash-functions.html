@@ -2,7 +2,7 @@
 title: (توابع)Bash Functions
 description: bash توابع رو هم پشتیبانی میکند.
 published: true
-date: 2025-06-03T20:39:16.999Z
+date: 2025-06-03T20:41:55.607Z
 tags: bash, bash script
 editor: code
 dateCreated: 2025-06-03T18:29:42.624Z
@@ -34,9 +34,9 @@ trap EC ERR</code></pre>
 <p>&nbsp;</p>
 <h2>3 استخراج فایل ها</h2>
 <p>این تابع استخراج میکنه هر نوع فایل فشرده رو با دستور</p>
-<pre><code class="language-plaintext">extract &lt;file1&gt; &lt;file2&gt; ...</code></pre>
+<pre><code class="language-plaintext" style="float: left; direction: ltr;">extract &lt;file1&gt; &lt;file2&gt; ...</code></pre>
 <p>&nbsp;</p>
-<pre><code class="language-plaintext">extract() {
+<pre><code class="language-plaintext" style="float: left; direction: ltr;">extract() {
     local c e i
 
     (($#)) || return
@@ -72,14 +72,14 @@ trap EC ERR</code></pre>
 <p>&nbsp;</p>
 <blockquote>
   <p>نکته: باید پکیج های ارشیو و فشرده سازی رو نصب داشته باشید.</p>
-  <pre><code class="language-plaintext">pacman -S bzip2 gzip xz zstd tar 7zip unrar bsdtar</code></pre>
+  <pre><code class="language-plaintext" style="float: left; direction: ltr;">pacman -S bzip2 gzip xz zstd tar 7zip unrar bsdtar</code></pre>
   <p>&nbsp;</p>
 </blockquote>
 <h2>cd 4 و ls در یک دستور</h2>
 <p>برای مطمئن شدن از رفتن به یک دایرکتوری دیگر بعد از cd از دستور ls استفاده میکنیم در این تابع به ما کمک میکند که از یک دستور استفاده کنیم با این دستور cl مخفف change list و اگر دایرکتوری موجود نباشد با ارور مسیج مواجه میشویم</p>
-<pre><code class="language-plaintext">cl &lt;directory&gt;</code></pre>
+<pre><code class="language-plaintext" style="float: left; direction: ltr;">cl &lt;directory&gt;</code></pre>
 <p>&nbsp;</p>
-<pre><code class="language-plaintext">cl() {
+<pre><code class="language-plaintext" style="float: left; direction: ltr;">cl() {
 	local dir="$1"
 	local dir="${dir:=$HOME}"
 	if [[ -d "$dir" ]]; then
@@ -95,9 +95,9 @@ trap EC ERR</code></pre>
 <p>&nbsp;</p>
 <h2>5 یادداشت اسان</h2>
 <p>این تابع برای یادداشت استفاده میشه با استفاده از دستور note میتوانید یادداشت های خود رو ببینید با استفاده از note -c یادداشت هاتون رو پاک کنید و با دستور پایین یاداشت اضافه کنید.</p>
-<pre><code class="language-plaintext">note &lt;یادداشت شما&gt;</code></pre>
+<pre><code class="language-plaintext" style="float: left; direction: ltr;">note &lt;یادداشت شما&gt;</code></pre>
 <p>&nbsp;</p>
-<pre><code class="language-plaintext">note () {
+<pre><code class="language-plaintext" style="float: left; direction: ltr;">note () {
     # if file doesn't exist, create it
     if [[ ! -f $HOME/.notes ]]; then
         touch "$HOME/.notes"
@@ -117,16 +117,16 @@ trap EC ERR</code></pre>
 <p>&nbsp;</p>
 <h2>6 ماشین حساب</h2>
 <p>این تابع کمک میکنه عملیات های ریاضی انجام بدید مثل دستورات زیر:</p>
-<pre><code class="language-plaintext">calc 95+89
+<pre><code class="language-plaintext" style="float: left; direction: ltr;">calc 95+89
 calc 30/5
 calc 94+329-164-15</code></pre>
 <p>تابع:</p>
-<pre><code class="language-plaintext">calc() {
+<pre><code class="language-plaintext" style="float: left; direction: ltr;">calc() {
     echo "scale=3;$@" | bc -l
 }</code></pre>
 <p>&nbsp;</p>
 <h2>7 نمایش سایز</h2>
 <p>این تابع سایز دایرکتوری های مسیر / رو بهتون نشون میده و بر اساس سایز مرتبشون میکنه کافیه از دستور whatsize استفاده کنید.</p>
-<pre><code class="language-plaintext">whatsize(){
+<pre><code class="language-plaintext" style="float: left; direction: ltr;">whatsize(){
     du -h --max-depth=1 --exclude=/{proc,sys,dev,run} -t 1 ${1:-/} 2&gt;/dev/null | sort -hr
 } </code></pre>
