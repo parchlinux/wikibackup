@@ -1,0 +1,34 @@
+<!--
+title: (توابع)Bash Functions
+description: bash توابع رو هم پشتیبانی میکند.
+published: false
+date: 2025-06-03T18:29:42.624Z
+tags: bash, bash script
+editor: ckeditor
+dateCreated: 2025-06-03T18:29:42.624Z
+-->
+
+<h1>Bash/Functions</h1>
+<p>Bash از توابع پشتیبانی میکند. برای اضافه کردن تابع میتونید در فایل bashrc./~ یا فایل هایی اجرایی در این فایل هست تابع خود را بنویسید. در ادامه نمونه هایی از توابع رو میبینیم.</p>
+<p>&nbsp;</p>
+<h2>1 تابع نمایش ارور کد</h2>
+<p>ارور کد: هر دستور بعد از اجرا و اتمام یک کد را خروجی میدهد که عدد 0 نشان دهنده انجام شدن هست اما اگر دستور به ارور بخورد عدد ۱ به بالا را میدهد که هر کدام برای هر دستور معنی خاصی دارند.</p>
+<p>دستور trap اگر خروجی اخرین دستور بغیر از 0 باشد تابع را اجرا میکند.</p>
+<pre><code class="language-c">EC() {
+	echo -e '\e[1;33m'code $?'\e[m\n'
+}
+trap EC ERR</code></pre>
+<p>&nbsp;</p>
+<h2>2 کامپایل و اجرای کد C&nbsp;</h2>
+<p>در این تابع کد شما رو کامپایل میکنه و فایل باینری رو در این مسیر temp/ ذخیره میکنه و بعد اجرا میکنه. و بعد از بسته شدن برنامه فایل کامپایل شده پاک میشه.</p>
+<pre><code class="language-c">csource() {
+[[ $1 ]]    || { echo "Missing operand" &gt;&amp;2; return 1; }
+	[[ -r $1 ]] || { printf "File %s does not exist or is not readable\n" "$1" &gt;&amp;2; return 1; }
+	local output_path=${TMPDIR:-/tmp}/${1##*/};
+	gcc "$1" -o "$output_path" &amp;&amp; "$output_path";
+	rm "$output_path";
+	return 0;
+}</code></pre>
+<p>&nbsp;</p>
+<h2>3 استخراج فایل ها</h2>
+<p>این تابع استخراج میکنه هر نوع تایپ&nbsp;</p>
