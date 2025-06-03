@@ -1,0 +1,169 @@
+---
+title: dani-template
+description: 
+published: false
+date: 2025-06-03T20:15:58.496Z
+tags: 
+editor: markdown
+dateCreated: 2025-06-03T20:15:58.496Z
+---
+
+# Bash/Functions 
+Bash از توابع پشتیبانی میکند. برای اضافه کردن تابع میتونید در فایل bashrc./~ یا فایل هایی اجرایی در این فایل هست تابع خود را بنویسید. در ادامه نمونه هایی از توابع رو میبینیم.
+
+
+
+## 1 تابع نمایش ارور کد
+
+دستور trap اگر خروجی اخرین دستور بغیر از 0 باشد تابع را اجرا میکند.
+
+> ارور کد: هر دستور بعد از اجرا و اتمام یک کد را خروجی میدهد که عدد 0 نشان دهنده انجام شدن هست اما اگر دستور به ارور بخورد عدد ۱ به بالا را میدهد که هر کدام برای هر دستور معنی خاصی دارند.
+{.is-info}
+
+`` 
+  <html>
+      <head>
+      </head>
+    </html>
+``
+
+2 کامپایل و اجرای کد C 
+
+در این تابع کد شما رو کامپایل میکنه و فایل باینری رو در این مسیر temp/ ذخیره میکنه و بعد اجرا میکنه. و بعد از بسته شدن برنامه فایل کامپایل شده پاک میشه.
+
+csource() {
+[[ $1 ]]    || { echo "Missing operand" >&2; return 1; }
+	[[ -r $1 ]] || { printf "File %s does not exist or is not readable\n" "$1" >&2; return 1; }
+	local output_path=${TMPDIR:-/tmp}/${1##*/};
+	gcc "$1" -o "$output_path" && "$output_path";
+	rm "$output_path";
+	return 0;
+}
+
+
+
+3 استخراج فایل ها
+
+این تابع استخراج میکنه هر نوع فایل فشرده رو با دستور
+
+extract <file1> <file2> ...
+
+
+
+extract() {
+    local c e i
+
+    (($#)) || return
+
+    for i; do
+        c=''
+        e=1
+
+        if [[ ! -r $i ]]; then
+            echo "$0: file is unreadable: \`$i'" >&2
+            continue
+        fi
+
+        case $i in
+            *.t@(gz|lz|xz|b@(2|z?(2))|a@(z|r?(.@(Z|bz?(2)|gz|lzma|xz|zst)))))
+                   c=(bsdtar xvf);;
+            *.7z)  c=(7z x);;
+            *.bz2) c=(bunzip2);;
+            *.gz)  c=(gunzip);;
+            *.rar) c=(unrar x);;
+            *.xz)  c=(unxz);;
+            *.zip) c=(unzip);;
+            *.zst) c=(unzstd);;
+            *)     echo "$0: unrecognized file extension: \`$i'" >&2
+                   continue;;
+        esac
+
+        command "${c[@]}" "$i"
+        ((e = e || $?))
+    done
+    return "$e"
+}
+
+ 
+
+نکته: باید پکیج های ارشیو و فشرده سازی رو نصب داشته باشید.
+
+pacman -S bzip2 gzip xz zstd tar 7zip unrar bsdtar
+
+ 
+
+cd 4 و ls در یک دستور
+
+برای مطمئن شدن از رفتن به یک دایرکتوری دیگر بعد از cd از دستور ls استفاده میکنیم در این تابع به ما کمک میکند که از یک دستور استفاده کنیم با این دستور cl مخفف change list و اگر دایرکتوری موجود نباشد با ارور مسیج مواجه میشویم
+
+cl <directory>
+
+
+
+cl() {
+	local dir="$1"
+	local dir="${dir:=$HOME}"
+	if [[ -d "$dir" ]]; then
+		cd "$dir" >/dev/null; ls
+	else
+		echo "bash: cl: $dir: Directory not found"
+	fi
+}
+
+ 
+
+نکته برای این که خروجی ls رنگی باشه در تابع جلوی دستور ls از اپشن color=auto-- اضافه کنید و برای دیدن جزئیات h- اضافه کنید.
+
+
+
+5 یادداشت اسان
+
+این تابع برای یادداشت استفاده میشه با استفاده از دستور note میتوانید یادداشت های خود رو ببینید با استفاده از note -c یادداشت هاتون رو پاک کنید و با دستور پایین یاداشت اضافه کنید.
+
+note <یادداشت شما>
+
+
+
+note () {
+    # if file doesn't exist, create it
+    if [[ ! -f $HOME/.notes ]]; then
+        touch "$HOME/.notes"
+    fi
+
+    if ! (($#)); then
+        # no arguments, print file
+        cat "$HOME/.notes"
+    elif [[ "$1" == "-c" ]]; then
+        # clear file
+        printf "%s" > "$HOME/.notes"
+    else
+        # add all arguments to file
+        printf "%s\n" "$*" >> "$HOME/.notes"
+    fi
+}
+
+
+
+6 ماشین حساب
+
+این تابع کمک میکنه عملیات های ریاضی انجام بدید مثل دستورات زیر:
+
+calc 95+89
+calc 30/5
+calc 94+329-164-15
+
+تابع:
+
+calc() {
+    echo "scale=3;$@" | bc -l
+}
+
+
+
+7 نمایش سایز
+
+این تابع سایز دایرکتوری های مسیر / رو بهتون نشون میده و بر اساس سایز مرتبشون میکنه کافیه از دستور whatsize استفاده کنید.
+
+whatsize(){
+    du -h --max-depth=1 --exclude=/{proc,sys,dev,run} -t 1 ${1:-/} 2>/dev/null | sort -hr
+} 
