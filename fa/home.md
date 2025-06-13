@@ -2,7 +2,7 @@
 title: خانه
 description: 
 published: true
-date: 2025-06-13T06:03:02.558Z
+date: 2025-06-13T06:21:44.778Z
 tags: 
 editor: markdown
 dateCreated: 2024-04-05T13:21:21.206Z
@@ -28,22 +28,4 @@ dateCreated: 2024-04-05T13:21:21.206Z
 |       [مدیر بسته در پارچ](/fa/Package-management) |                 مدیریت بسته در پارچ لینوکس |
 |     [نحوه مشارکت در پارچ](/fa/contributing) | مشارکت بر روی پروژهٔ پارچ و پروژه‌های وابسته |
 | [نصب راه‌انداز‌های انویدیا](/fa/use-from-nvidia-in-parch) | استفاده از کارت گرافیک انویدیا در پارچ     |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| [پرسش های پرتکرار؟](/fa/Frequently_asked_questions) |   پرسش هایی که اغلب پرسیده می شود|
