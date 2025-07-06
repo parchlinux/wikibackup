@@ -2,7 +2,7 @@
 title: آموزش گنو/لینوکس
 description: پیوند به منابع و دوره‌های آموزشی گنو/لینوکس
 published: true
-date: 2025-05-29T17:44:46.315Z
+date: 2025-07-06T19:52:32.558Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-29T17:38:56.911Z
@@ -18,7 +18,7 @@ dateCreated: 2025-05-29T17:38:56.911Z
 
 ## کتاب
 [کتاب راهنمای دبیان](https://debian-handbook.info/)
-کتاب مقدس لینوکس (Linux Bible)، پیوند به‌زودی.
+[کتاب مقدس لینوکس (Linux Bible)](https://z-library.sk/book/11998257/9bcdd2/linux-bible.html)
 
 ## LPIC
 [آموزش جدید LPIC 1 جادی](https://www.youtube.com/watch?v=cqfrsmg4BKo&list=PL-tKrPVkKKE0kM18Sg5fqaZW1V2nidAeU)
