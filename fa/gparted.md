@@ -1,8 +1,8 @@
 ---
-title: gparted
+title: Gparted
 description: 
 published: true
-date: 2025-07-11T03:22:31.918Z
+date: 2025-07-11T03:23:44.774Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-11T03:22:31.918Z
@@ -10,10 +10,6 @@ dateCreated: 2025-07-11T03:22:31.918Z
 
 **GParted** یک ویرایشگر افراز آزاد برای مدیریت گرافیکی افرازهای افزارهٔ ذخیره است.
 این نرم‌افزار یک رابط گرافیکی برای Parted است.
-
-![نشان gparted](بارگیری.jpeg){width=170px}
-
----
 
 # امکانات
 
