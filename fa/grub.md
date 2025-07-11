@@ -2,7 +2,7 @@
 title: گراب
 description: 
 published: true
-date: 2025-07-11T03:01:36.092Z
+date: 2025-07-11T03:17:42.895Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-11T03:01:36.092Z
@@ -153,7 +153,3 @@ GRUB_CMDLINE_LINUX="splash quiet"
 ```
 GRUB_DISABLE_OS_PROBER=false
 ```
-
-## تعمیر
-
-برای نصب دوبارهٔ گراب روی رایانه‌ای که گراب از پیش روی آن نصب بوده و دچار مشکل شده است، بخش تعمیر گراب را ببینید.
