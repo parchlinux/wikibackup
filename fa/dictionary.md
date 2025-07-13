@@ -2,7 +2,7 @@
 title: واژه‌نامهٔ
 description: واژه‌نامهٔ ای برای ترجمه برنامه‌های اوپن‌سورس و یا مشارکت در ترجمه ویکی پارچ.
 published: true
-date: 2024-10-06T14:34:13.068Z
+date: 2025-07-13T18:09:00.759Z
 tags: پارچ, واژه‌نامهٔ, مشارکت
 editor: markdown
 dateCreated: 2024-08-06T14:21:20.830Z
@@ -1395,8 +1395,8 @@ dateCreated: 2024-08-06T14:21:20.830Z
 | probability | احتمال | | |
 | Problem | مسئله | | |
 | procedure | رویّه | | |
-| Process | فرآیند | | |
-| Process ID | شناسه فرآیند | | |
+| Process | پردازه | فرآیند | |
+| Process ID | شناسه پردازه | شناسه فرآیند | |
 | Processing | پردازش | | |
 | Processor | پردازنده | | |
 | Prodigy | پرودیگی | | |
