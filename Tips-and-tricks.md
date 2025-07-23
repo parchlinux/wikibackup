@@ -2,7 +2,7 @@
 title: Tips and Tricks
 description: 
 published: true
-date: 2024-04-05T10:27:08.108Z
+date: 2025-07-23T16:30:53.669Z
 tags: tips, tricks
 editor: markdown
 dateCreated: 2024-04-05T10:25:57.151Z
@@ -10,7 +10,7 @@ dateCreated: 2024-04-05T10:25:57.151Z
 
 # Tips and Tricks
 
-## GPG Signature is not valid
+## Arch Linux GPG Signature is not valid
 
 If you are downloading a new application or upgrading a system and you face the problem that indicates the GPG Signature is not valid, you should to this things:
 
@@ -23,6 +23,43 @@ sudo pacman -Sy
 sudo pacman -S archlinux-keyring
 ```
 
+## Parch Linux GPG Signature is not valid
+
+If you're experiencing issues with GPG signatures in Parch Linux, follow these steps to temporarily disable signature verification, install the updated keyring, and then restore normal behavior.
+
+1. Temporarily disable GPG signature checks for PPR and PCP repositories
+
+Edit the /etc/pacman.conf file and locate the [ppr] and [pcp] sections. Change their SigLevel to Never:
+```
+[ppr]
+SigLevel = Never
+Include = /etc/pacman.d/parch-mirrors
+
+[pcp]
+SigLevel = Never
+Include = /etc/pacman.d/parch-mirrors
+```
+2. Update the keyring package
+
+Now, install the latest parchlinux-keyring package:
+```
+sudo pacman -Sy parchlinux-keyring
+```
+This will install the trusted GPG keys required to validate Parch Linux packages.
+
+3. Restore the original SigLevel settings
+
+Once the keyring is installed, revert the SigLevel settings for [ppr] and [pcp] back to:
+
+```
+[ppr]
+SigLevel = Optional TrustAll
+Include = /etc/pacman.d/parch-mirrors
+
+[pcp]
+SigLevel = Optional TrustAll
+Include = /etc/pacman.d/parch-mirrors
+```
 
 ## Live system root space size is low
 
