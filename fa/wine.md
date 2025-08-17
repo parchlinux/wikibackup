@@ -1,8 +1,8 @@
 ---
-title: واین
+title: wine
 description: لایه سازگاری برنامه‌های ویندوزی با گنو/لینوکس
 published: true
-date: 2024-11-10T16:18:25.088Z
+date: 2025-08-17T20:06:28.815Z
 tags: لینوکس, واین
 editor: markdown
 dateCreated: 2024-11-10T16:18:20.333Z
