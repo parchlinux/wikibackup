@@ -2,7 +2,7 @@
 title: آموزش نصب پارچ لینوکس
 description: 
 published: true
-date: 2025-08-20T17:20:44.389Z
+date: 2025-08-20T17:26:24.721Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-25T15:55:47.738Z
@@ -185,3 +185,10 @@ sudo pacman -Syu
 [مدیریت بسته در پارچ](/fa/Package-management)
 
 
+## ویدئو نصب پارچ
+
+> همچنین یک ویدئو از نحوه نصب پارچ توسط امیرحسین پناهی‌فر عزیز ضبط شده که از زیر قابل تماشا است.
+{.is-info}
+
+
+<iframe title="آموزش مقدماتی توزیع پارچ قسمت نخست" width="560" height="315" src="https://tubedu.org/videos/embed/1JBgRjx489wYsHHQuc6yfH" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
