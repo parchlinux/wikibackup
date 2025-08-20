@@ -2,7 +2,7 @@
 title: آموزش نصب پارچ لینوکس
 description: 
 published: true
-date: 2025-04-25T16:24:15.407Z
+date: 2025-08-20T17:14:24.560Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-25T15:55:47.738Z
@@ -183,3 +183,12 @@ sudo pacman -Syu
 [فروم پارچ](https://forum.parchlinux.com)
 [نصب درایورهای انویدیا در پارچ](https://wiki.parchlinux.com/fa/use-from-nvidia-in-parch)
 [مدیریت بسته در پارچ](/fa/Package-management)
+
+
+
+## ویدئو نصب پارچ
+
+<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/mbxlb9s/vt/frame"  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>
+
+
+این ویدئو توسط امیرحسین پناهی‌فر عزیز ضبط شده و مراحل نصب پارچ را توضیح می‌دهد.
