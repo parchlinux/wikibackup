@@ -2,7 +2,7 @@
 title: آموزش نصب پارچ لینوکس
 description: 
 published: true
-date: 2025-08-20T17:26:24.721Z
+date: 2025-08-20T17:48:19.596Z
 tags: 
 editor: markdown
 dateCreated: 2025-04-25T15:55:47.738Z
@@ -191,4 +191,4 @@ sudo pacman -Syu
 {.is-info}
 
 
-<iframe title="آموزش مقدماتی توزیع پارچ قسمت نخست" width="560" height="315" src="https://tubedu.org/videos/embed/1JBgRjx489wYsHHQuc6yfH" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+<div style="position: relative; padding-top: 56.25%;"><iframe title="آموزش مقدماتی توزیع پارچ قسمت نخست" width="100%" height="100%" src="https://tubedu.org/videos/embed/1JBgRjx489wYsHHQuc6yfH" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" style="position: absolute; inset: 0px;"></iframe></div>
