@@ -1,8 +1,8 @@
 ---
 title: نصب zsh و oh-my-bash
 description: در این قسمت با نصب zsh و oh-my-bash همراه با شخصی سازی آنها آشنا می شوید.
-published: false
-date: 2025-08-25T18:22:42.066Z
+published: true
+date: 2025-08-25T18:23:07.901Z
 tags: zsh, ohmybash, shell
 editor: markdown
 dateCreated: 2025-08-25T18:22:42.066Z
