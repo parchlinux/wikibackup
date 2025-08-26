@@ -1,8 +1,8 @@
 ---
 title: مانیتورینگ شبکه
-description: در قسمت با ابزارهای مانیتورینگ شبکه در لینوکس آشنا خوهید شد.
+description: در این قسمت با ابزارهای مانیتورینگ شبکه در لینوکس آشنا خوهید شد.
 published: true
-date: 2025-08-26T16:38:46.775Z
+date: 2025-08-26T16:39:51.515Z
 tags: bmon, iftop, nethogs, nload
 editor: markdown
 dateCreated: 2025-08-26T16:36:57.529Z
