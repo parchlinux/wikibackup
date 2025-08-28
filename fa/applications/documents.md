@@ -1,8 +1,8 @@
 ---
-title: برنامه‌های کاربردی/اسناد
+title: فهرست برنامه‌های آرچ/اسناد
 description: 
 published: true
-date: 2025-08-28T16:39:28.445Z
+date: 2025-08-28T16:40:02.374Z
 tags: 
 editor: markdown
 dateCreated: 2025-08-28T16:39:28.445Z
