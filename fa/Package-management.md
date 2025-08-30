@@ -2,13 +2,20 @@
 title: مدیریت بسته
 description: 
 published: true
-date: 2025-07-24T03:20:30.605Z
+date: 2025-08-30T15:35:59.034Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-07T16:45:46.483Z
 ---
 
 # مدیریت بسته در پارچ لینوکس
+
+
+## ویدئو آموزشی کار با پک‌من و paru
+
+شما می‌توانید بجای مطالعه تمام این مطالب ویدئو زیر را برای یادگیری کار با pacman و paru تماشا کنید.
+
+<div style="position: relative; padding-top: 56.25%;"><iframe title="آموزش استفاده از pacman و paru در پارچ" width="100%" height="100%" src="https://tubedu.org/videos/embed/jz4hXemh7RFUp6HYgi6egK" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" style="position: absolute; inset: 0px;"></iframe></div>
 
 ## مدیر بسته
 
