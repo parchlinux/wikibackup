@@ -1,8 +1,8 @@
 ---
-title: زنجیره‌پروکسی
+title: proxychain
 description: ابزاری ساده است که پروکسی‌های معمولی شما را به یک تونل تبدیل می‌کند
 published: true
-date: 2025-08-23T14:09:33.922Z
+date: 2025-09-01T23:04:44.428Z
 tags: نکات
 editor: markdown
 dateCreated: 2025-08-18T03:49:35.109Z
@@ -15,7 +15,7 @@ dateCreated: 2025-08-18T03:49:35.109Z
 ## نصب در پارچ
 
 ```bash
-sudo paru -S proxychains-ng
+paru -S proxychains-ng
 ```
 
 ## راه‌اندازی اولیه
