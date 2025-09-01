@@ -2,7 +2,7 @@
 title: استفاده از انویدیا در پارچ
 description: 
 published: true
-date: 2024-11-19T17:21:58.813Z
+date: 2025-09-01T23:03:18.758Z
 tags: پارچ, انویدیا
 editor: markdown
 dateCreated: 2024-11-13T18:31:50.299Z
@@ -84,7 +84,7 @@ paru -S nvidia-470xx-dkms nvidia-470xx-settings or paru -S nvidia-390xx-dkms nvi
 
 ۲.nvidia-open
 
-از نسخه  510 به بعد، درایور nvidia-open منتشر شد که کد کرنل آن باز است و از گرافیک های سری تورینگ به بالا ساپورت میکند، اینجا لیست گرافیک‌هایی است که از این درایور پشتیبانی می‌کنند.
+از نسخه  510 به بعد، درایور nvidia-open منتشر شد که کد کرنل آن باز است و از گرافیک های سری تورینگ به بالا ساپورت میکند، [اینجا](https://github.com/NVIDIA/open-gpu-kernel-modules?tab=readme-ov-file#compatible-gpus) لیست گرافیک‌هایی است که از این درایور پشتیبانی می‌کنند.
 
 نحوه نصب آن به این شکل است، ابتدا باید به کمک ویرایشگر نانو فایل `/etc/mkinitcpio.conf` را باز کنیم:
 
