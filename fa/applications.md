@@ -2,7 +2,7 @@
 title: برنامه‌های کاربردی
 description: لیستی از برنامه‌های کاربردی برای گنو/لینوکس بر اساس دسته‌بندی
 published: true
-date: 2025-09-02T18:06:58.418Z
+date: 2025-09-02T18:09:27.642Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-29T16:26:48.677Z
@@ -27,7 +27,7 @@ dateCreated: 2025-07-29T16:26:48.677Z
 - [/چندرسانه‌ای](/fa/applications/multimedia)
 - [/علمی](/fa/applications/science)
 - [/امنیتی](/fa/applications/security)
-- [/Utilities]
+- [/ابزارها](/fa/applications/utilities)
 - [/Other]
 
 ---
