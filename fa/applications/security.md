@@ -1,8 +1,8 @@
 ---
-title: برنامه‌های کاربردی / امنیت
+title: برنامه‌های کاربردی / امنیتی
 description: 
 published: true
-date: 2025-09-02T18:04:46.576Z
+date: 2025-09-02T18:05:00.615Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-02T18:04:46.576Z
