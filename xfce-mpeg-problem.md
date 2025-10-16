@@ -2,7 +2,7 @@
 title: رفع خطای کدک MPEG در XFCE
 description: 
 published: true
-date: 2025-10-16T10:04:45.949Z
+date: 2025-10-16T10:05:06.811Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-16T10:04:45.949Z
@@ -10,7 +10,7 @@ dateCreated: 2025-10-16T10:04:45.949Z
 
 ### رفع خطای عدم پشتیبانی از کُدک MPEG در XFCE
 
-اگر تازه محیط **XFCE** را در **Parch Linux** نصب کرده باشید، ممکن است هنگام پخش ویدیو با خطای زیر مواجه شوید:
+اگر تازه محیط **XFCE** را در **پارچ** نصب کرده باشید، ممکن است هنگام پخش ویدیو با خطای زیر مواجه شوید:
 
 ```
 VLC could not decode the format “mpgv” (MPEG-1/2 Video)
