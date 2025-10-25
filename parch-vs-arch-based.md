@@ -2,7 +2,7 @@
 title: پارچ در مقایسه با سایر توزیع‌های آرچ‌پایه
 description: در این مطلب مقایسه‌ای بین پارچ و سایر توزیع‌های آرچ‌پایه صورت می‌گیرد که انتخاب کاربران را ساده‌تر کند و به برخی از سوالات پرتکرار در خصوص پارچ خاتمه دهد.
 published: true
-date: 2025-10-25T19:49:04.870Z
+date: 2025-10-25T19:49:34.764Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-25T19:49:04.870Z
@@ -76,4 +76,3 @@ dateCreated: 2025-10-25T19:49:04.870Z
 - [دیستروواچ درباره پارچ لینوکس](https://distrowatch.com/parch)
 - [ویکی آرچ لینوکس درباره توزیع‌های مبتنی بر آرچ](https://wiki.archlinux.org/title/Arch-based_distributions)
 - [بررسی پارچ لینوکس - دیباگ‌پوینت](https://www.debugpoint.com/parch-linux-review/)
-- [مقایسه مانجارو و دیگر توزیع‌ها - سون لرن](https://7learn.com/blog/what-is-manjaro)
