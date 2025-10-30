@@ -1,66 +1,64 @@
 ---
-title: Neovim as an IDE
-description: Introduction to Vim and NeoVim, Along with How to Use NeoVim Like Popular IDEs  
+title: NeoVim به عنوان IDE
+description: معرفی NeoVim همراه با چگونگی به‌کارگیری NeoVim مانند IDE های محبوب
 published: true
-date: 2025-02-13T07:54:40.067Z
-tags: ide, vim, neovim, nvim
+date: 2025-10-30T16:46:03.175Z
+tags: ide, vim, neovim, ویم, nvim, نئوویم
 editor: markdown
-dateCreated: 2025-02-08T12:49:56.181Z
+dateCreated: 2025-02-08T12:37:50.156Z
 ---
 
-# Vim/NeoVim
-## Introduction
-**Vim** is a powerful open-source text editor that has been developed since the 1990s. Designed as a command-line editor, it offers highly customizable and personalizable features.
-**NeoVim** is a more modern version inspired by Vim, featuring better internal APIs and improved window management, making it a powerful tool for developers.
+# نئوویم
 
-## Installation
+## معرفی
+نئوویم یک انشعاب از ویم با یک سری اضافات است که در تلاش است تا توسعه پذیری و قابلیت نگهداری ویم را بهبود بخشد. نئوویم از همان نحو پیکربندی ویم پیروی می‌کند؛ بنابراین یک فایل پیکربندی مشابه را می‌توان با هر دو ویرایشگر استفاده کرد، اگرچه تفاوت‌های جزئی در جزئیات گزینه‌ها وجود دارد. اگر از ویژگی‌های اضافه شده نئوویم استفاده نشود، نئوویم تقریباً با تمام ویژگی‌های Vim سازگار است.
 
-### 1. **Vim**
-Vim is pre-installed on many Linux distributions such as Parch. To install the latest version, you can run the following command:
-```bash
-sudo pacman -S vim
-```
+پروژهٔ نئوویم در سال ۲۰۱۴ و با تلاش برخی از اعضای انجمن ویم انجام شد که با استفاده از بازسازی سطح بالا، به هدف‌هایی از جمله ارائه نویسه‌ها و پلاگین‌های قدرتمندتر و همچنین ادغام بهتر با رابط‌های کاربری گرافیکی دست پیدا کنند. این پروژه نرم‌افزار آزاد است و کد منبع آن در GitHub موجود است. (مخزن در گیت‌هاب: https://github.com/neovim/neovim) 
 
-### 2. **NeoVim**
-NeoVim is a more modern editor that can be easily installed with the following command:
+## نصب
+
+نئوویم به راحتی با دستور زیر قابل نصب است:
 ```bash
 sudo pacman -S neovim
 ```
-> Neovim is installed under the name `neovim` but it can be run using `nvim`.
 
----
-## Turning NeoVim into an IDE
-NeoVim alone does not have all the tools necessary for developers, so by using available plugins, it can be transformed into an environment similar to existing IDEs. There are two main approaches for this.
+> نئوویم با نام `neovim` نصب می‌شود ولی با دستور `nvim` می‌توان آن را اجرا نمود
 
-### 1. **Pre-configured Configurations**
-For users who want to quickly set up a powerful development environment, using pre-configured setups is the best option. Some of the most popular configurations include:
+## تبدیل نئوویم به IDE
+نئوویم به تنهایی ابزار های لازم برای توسعه‌دهندگان را ندارد، به همین دلیل با نصب افزونه، آن را مشابه IDE میکنیم.
+برای این کار دو روش پیش رو داریم.
+
+
+### 1. **کانفیگ‌های موجود**
+برای کاربرانی که می‌خواهند به سرعت یک محیط توسعه قدرتمند برسند، به‌کارگیری کانفیگ‌های از پیش موجود بهترین گزینه است. برخی از محبوب‌ترین کانفیگ‌ها عبارتند از:
 
 #### **AstroNvim**
-AstroNvim is a beautiful and feature-rich Neovim configuration focused on efficiency and extensibility. To install it, follow the [official AstroNvim documentation](https://docs.astronvim.com/).
+AstroNvim یک پیکربندی نئوویم زیبا و غنی از ویژگی است که بر کارایی و توسعه‌پذیری تمرکز دارد. برای نصب آن [راهنمای رسمی AstroNvim](https://docs.astronvim.com/) را دنبال کنید.
 
 #### **NVChad**
-NVChad is a popular Neovim configuration that allows users to easily customize it. To install it, follow the [official NVChad documentation](https://nvchad.com/docs/quickstart/install).
+NVChad یک کانفیگ محبوب برای نئوویم است که  به کاربران اجازه می‌دهد تا به راحتی آن را شخصی‌سازی کنند. برای نصب آن [راهنمای رسمی NVChad](https://nvchad.com/docs/quickstart/install) را دنبال کنید 
 
-### 2. **Installing from Scratch**
-To turn NeoVim into an IDE, you can install the necessary plugins one by one. This approach is suitable for users who want full control over their settings. For this, you need a plugin manager to manage other plugins. One of the most popular plugin managers is [lazy.nvim](https://www.lazyvim.org/).
-#### Installing the `lazy.nvim` Plugin Manager:
-1. To install lazy.nvim, clone it using Git:
+### 2. **تنظیم از صفر**
+برای تبدیل نئوویم به یک IDE، می‌توانید افزونه‌های لازم را خودتان یک به یک نصب کنید. این روش برای کاربرانی مناسب است که می‌خواهند تنظیمات خود را به طور کامل کنترل کنند. برای این کار نیاز به یک مدیر افزونه دارید تا دیگر افزونه های شما را مدیریت کند. یکی از محبوب ترین مدیر بسته‌های موجود [lazy.nvim](https://www.lazyvim.org/) است.
+
+#### نصب مدیر افزونه `lazy.nvim`:
+1. برای نصب lazy.nvim آن را با گیت دریافت کنید:
 ```bash
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 ```
 
-2. After installation, remove the `.git` folder:
+2. پس از نصب، پوشه `.git` را پاک کنید:
 ```bash
 rm -rf ~/.config/nvim/.git
 ```
 
-3. You can run it using the `nvim` command. now you need to install some plugins. Some of the most commonly used plugins include:
+3. می‌توانید آن را با دستور `nvim` اجرا کنید، حالا نیاز به نصب افزونه‌ها دارید. برخی از افزونه‌های پرکاربرد مانند:
    - **LSP**: `nvim-lspconfig`
-   - **Autocompletion**: `nvim-cmp`
-   - **Project Manager**: `project.nvim`
-   - **File Explorer**: `nvim-tree.lua`
+   - **تکمیل خودکار**: `nvim-cmp`
+   - **مدیر پروژه**: `project.nvim`
+   - **مدیر فایل**: `nvim-tree.lua`
 
-#### Sample Configuration:
+#### نمونه کانفیگ:
 ```lua
 require("lazy").setup({
   {
@@ -76,29 +74,34 @@ require("lazy").setup({
   "nvim-tree/nvim-tree.lua", -- File explorer
   "mbbill/undotree",       -- Undo history
 })
+})
 ```
 
-> For installation using this method, you can follow the [official lazy.nvim documentation](https://www.lazyvim.org/).
+> برای نصب با این روش میتوانید [راهنمای رسمی lazy.nvim](https://www.lazyvim.org/) را دنبال کنید.
 {.is-info}
 
 
 ## NeoVide
-[NeoVide](https://neovide.dev/) is a GUI for NeoVim that functions like a regular terminal but adds more features to NeoVim.
+[NeoVide](https://neovide.dev/) یک رابط کاربری گرافیکی برای نئوویم است که مانند یک پایانه(Terminal) عادی عمل میکند که ویژگی‌های بیشتری برای NeoVim دارد. 
+#### ویژگی‌ها
 
-#### Features
-- **Ligatures**: Support for ligatures and font shaping to improve code appearance.
-- **Animated Cursor**: Cursor animations make it easier to track the cursor's position.
-- **Smooth Scrolling**: Instead of line-by-line scrolling, pixel-by-pixel animations smooth the user experience.
-- **Blurred Floating Windows**: Floating windows have blurred backgrounds for better separation from the main screen.
-- **Emoji Support**: Displays emojis even if the main font doesn't include them.
+- **Ligatures**: پشتیبانی از جفت‌نویسی(ligatures) و شکل‌دهی قلم برای بهبود ظاهر کد ها.
 
-#### Installation:
+- **Animated Cursor**: پویانمایی اشاره‌گر(cursor) که موقعیت اشاره‌گر را قابل دنبال کردن‌تر می‌کند.
+
+- **Smooth Scrolling**: بالا و پایین رفتن صفحه به جای حرکت خط به خط، پیکسل به پیکسل پویانمایی می‌شود، که تجربه کاربری را روان‌تر می‌کند.
+
+- **Blurred Floating Windows**: پس‌زمینه پنجره‌های شناور با جلوه محو پس‌زمینه بهتر از صفحه اصلی جدا میشوند.
+
+- **Emoji Support**: پشتیبانی از نمایش اموجی‌ها حتی اگر قلم اصلی شامل آن‌ها نباشد
+
+نصب:
 ```bash
 sudo pacman -S neovide
 ```
 
-## Plugin Marketplace
-Most likely, all the IDEs you've worked with before have had an official marketplace for installing plugins, but NeoVim does not have an official marketplace. To find plugins, you can search online for each plugin or browse unofficial resources. Below are some community-made lists of NeoVim plugins:
+## فروشگاه افزونه
+احتمالا تمام IDEهایی که تا به حال با آنها کار کرده‌اید برای نصب افزونه یک فروشگاه رسمی داشته‌اند، ولی در نئوویم چیزی به نام فروشگاه رسمی وجود ندارد، برای پیدا کردن افزونه‌ها میتوانید در اینترنت جستجو کرده و آموزش نصب هر افزونه را دنبال کنید و یا در منابع غیررسمی بگردید.اینها چند نمونه فهرست مردمی از افزونه‌های نئوویم را آورده‌ایم:
 - https://github.com/rockerBOO/awesome-neovim
 - https://neovimcraft.com/
 - https://vimawesome.com/
