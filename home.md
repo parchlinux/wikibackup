@@ -1,16 +1,31 @@
 ---
-title: Home
-description: Welcome to Parch Linux wiki!
+title: خانه
+description: 
 published: true
-date: 2024-04-05T10:17:27.414Z
-tags: home, welcome
+date: 2025-12-12T11:46:52.654Z
+tags: 
 editor: markdown
-dateCreated: 2024-04-05T10:17:16.712Z
+dateCreated: 2024-04-05T13:21:21.206Z
 ---
 
-# Welcome to Parch Linux wiki!
+# به ویکی پارچ لینوکس خوش آمدید!
+این ویکی رسمی [پارچ لینوکس](https://parchlinux.com/) است.
+شما می توانید **راه حلی برای مشکلات خود** بیابید و همچنین چیزهای جدیدی یاد بگیرید.
 
 
-This is the official wiki for Parch Linux.
 
-You can find **solution** for your problems as well as learning something new.
+برای مشارکت در تکمیل ویکی می‌توانید در ویکی ثبت‌نام کنید.
+
+## شروع کنید
+|  **موضوع** |                        **توضیح کوتاه** |
+|-----------:|---------------------------------------:|
+| [پارچ چیست؟](/fa/what-is-parch)|                 نمای کلی از توزیع پارچ |
+| [کدام نسخه؟](/fa/choosing-the-right-version) |   پارچ لینوکس مناسب شما|
+
+## استفاده از پارچ لینوکس
+|               **موضوع** |                            **توضیح کوتاه** |
+|------------------------:|-------------------------------------------:|
+|       [مدیر بسته در پارچ](/fa/Package-management) |                 مدیریت بسته در پارچ لینوکس |
+|     [نحوه مشارکت در پارچ](/fa/contributing) | مشارکت بر روی پروژهٔ پارچ و پروژه‌های وابسته |
+| [نصب راه‌انداز‌های انویدیا](/fa/use-from-nvidia-in-parch) | استفاده از کارت گرافیک انویدیا در پارچ     |
+| [پرسش های پرتکرار؟](/fa/Frequently_asked_questions) |   پرسش هایی که اغلب پرسیده می شود|
