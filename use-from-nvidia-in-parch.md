@@ -2,7 +2,7 @@
 title: استفاده از انویدیا در پارچ
 description: 
 published: true
-date: 2026-01-06T09:12:41.132Z
+date: 2026-01-06T09:29:54.438Z
 tags: پارچ, انویدیا
 editor: markdown
 dateCreated: 2024-11-13T18:31:50.299Z
@@ -19,7 +19,7 @@ dateCreated: 2024-11-13T18:31:50.299Z
 پیش از هرکاری، ابتدا باید تشخیص دهیم که چه نسخه‌ای از درایور با گرافیک ما سازگار است بنابراین باید برنامه nvidia-helper را از مخازن پارچ نصب کنیم و آن را اجرا کنیم:
 
 ```bash
-sudo pacman -S nvidia-helper && nvidia-helper
+sudo pacman -S nvidia-helper && sudo nvidia-helper
 ```
 
 اگر این خروجی را گرفتیم یعنی می‌توانیم آخرین نسخه درایور را نصب کنیم:
@@ -233,7 +233,7 @@ sudo nano /etc/nvidia/nvidia-application-profiles-rc.d/50-limit-free-buffer-pool
 
 > **هشدار**
 > بامبل‌بی قدیمی است و ممکن است با درایورهای جدید مشکل داشته باشد. از Envycontrol استفاده کنید.
-{.is-warning}
+>{.is-warning}
 
 برای نصب آن به این شکل عمل کنید:
 
@@ -290,7 +290,7 @@ sudo envycontrol -s hybrid
 > ```
 > 
 > اگر پردازنده گرافیکتان سری پاسکال یا قدیمی‌تر است، از bbswitch استفاده کنید.
-{.is-info}
+>{.is-info}
 
 **استفاده فقط از گرافیک انویدیا:**
 
