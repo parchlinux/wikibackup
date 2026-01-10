@@ -2,7 +2,7 @@
 title: به امید آزادی
 description: 
 published: true
-date: 2026-01-10T12:46:06.711Z
+date: 2026-01-10T21:23:55.176Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-10T12:17:41.400Z
@@ -51,6 +51,17 @@ dateCreated: 2026-01-10T12:17:41.400Z
 - [آفتاب نیوز](https://aftabnews.ir)
 - [تابناک](https://www.tabnak.ir)
 - [فارس نیوز](https://farsnews.ir)
+
+## خرید بلیط مسافرتی
+### هواپیما 
+- [AliBaba](https://www.alibaba.ir)
+
+### اتوبوس
+- [AliBaba](https://www.alibaba.ir)
+- [Payaneha](https://www.payaneha.com/)
+
+### قطار
+- [AliBaba](https://www.alibaba.ir)
 
 ## موسیقی و پادکست
 - [بیپ تونز (Beeptunes)](https://beeptunes.com)
