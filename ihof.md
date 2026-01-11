@@ -2,7 +2,7 @@
 title: به امید آزادی
 description: 
 published: true
-date: 2026-01-11T15:43:49.955Z
+date: 2026-01-11T16:54:06.051Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-10T12:17:41.400Z
@@ -94,7 +94,7 @@ dateCreated: 2026-01-10T12:17:41.400Z
 - **ویکی آرچ آفلاین:**
   - نصب با دستور: `sudo pacman -S arch-wiki-lite arch-wiki-docs`
 - **داکیومنت آفلاین:**
-  - ابزار `zeal` برای مشاهده داکیومنت‌ها.
+  - ابزار `zeal` برای مشاهده داکیومنت‌ها. نصب با دستور: `sudo pacman -S zeal`
 
 ## دلتاچت (DeltaChat) و پیام‌رسان‌ها
 - **سرورهای داخلی:**
@@ -115,4 +115,4 @@ dateCreated: 2026-01-10T12:17:41.400Z
 - **اشتراک‌گذاری متن و فایل:**
   - [Ulni Pastebin (با قابلیت رمزنگاری)](https://m.ulni.ir/)
   - [آپلودکن (آپلود فایل)](https://uploadkon.ir)
-
+  - [پیکوفایل (آپلود فایل)](https://www.picofile.com)
