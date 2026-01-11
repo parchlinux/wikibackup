@@ -2,7 +2,7 @@
 title: به امید آزادی
 description: 
 published: true
-date: 2026-01-11T04:41:25.858Z
+date: 2026-01-11T15:42:41.954Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-10T12:17:41.400Z
@@ -42,6 +42,8 @@ dateCreated: 2026-01-10T12:17:41.400Z
 ## مترجم و دیکشنری
 - [فرازین](https://www.faraazin.ir)
 - [آبادیس](https://abadis.ir)
+- [فست دیکشنری](https://fastdic.com) 
+- [بیاموز](https://dic.b-amooz.com)
 
 ## فروشگاه‌های اینترنتی
 - [ترب (جستجوگر کالا)](https://torob.com)
@@ -87,8 +89,8 @@ dateCreated: 2026-01-10T12:17:41.400Z
 
 ## منابع مخصوص لینوکس (آرچ و غیره)
 - **میرورهای داخلی:**
-  - [ArvanCloud Mirror](https://mirror.arvancloud.ir)
-  - [IUT Repo](https://repo.iut.ac.ir/)
+  - [ میرور آروان کلود](https://mirror.arvancloud.ir)
+  - [ میرور دانشگاه صنعتی اصفهان](https://repo.iut.ac.ir/)
 - **ویکی آرچ آفلاین:**
   - نصب با دستور: `sudo pacman -S arch-wiki-lite arch-wiki-docs`
 - **داکیومنت آفلاین:**
@@ -98,12 +100,12 @@ dateCreated: 2026-01-10T12:17:41.400Z
 - **سرورهای داخلی:**
   - `tiiiz.ir` (سرور دلتاچت)
   - `wiiz.ir` (سرور ماتریکس داخلی - Element)
-- **دانلود کلاینت:**
+- **دانلود کلاینت دلتاچت:**
   - [نسخه اندروید (گیت‌لب)](https://gitlab.aranserver.com/abbas/deltachat-app)
   - [نسخه ویندوز و لینوکس (دانشگاه علم و صنعت)](https://drive.iust.ac.ir/index.php/s/Q8JRAogiQz7D7yP)
 - **آموزش راه‌اندازی سریع:**
-  1. تنظیم DNS مودم روی `5.200.200.200`.
-  2. انتخاب "Create new profile" و سپس "Use Other server".
+  1. درصورت عدم اتصال : تنظیم DNS مودم روی `5.200.200.200`.
+  2. بازکردن کلاینت و انتخاب "Create new profile" و سپس "Use Other server".
   3. کپی عبارت `DCACCOUNT:https://tiiiz.ir/new` و استفاده از گزینه "Paste from clipboard" در بخش اسکن کد.
 
 ## ابزارهای آفلاین و اشتراک‌گذاری
