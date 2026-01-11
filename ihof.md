@@ -2,7 +2,7 @@
 title: به امید آزادی
 description: 
 published: true
-date: 2026-01-10T21:30:51.513Z
+date: 2026-01-11T04:41:25.858Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-10T12:17:41.400Z
@@ -32,7 +32,8 @@ dateCreated: 2026-01-10T12:17:41.400Z
 - [Par30Games](https://par30games.net)
 - [VGDL](https://vgdl.ir)
 - [PirateGames](https://www.pirategames.ir)
-- [parsigamer](https://parsigamer.ir/)
+- [parsigamer](https://parsigamer.ir)
+- [downloadly](https://downloadly.ir)
 
 ## مارکت‌های اندروید
 - [کافه بازار](https://cafebazaar.ir)
