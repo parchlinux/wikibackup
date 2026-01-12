@@ -2,7 +2,7 @@
 title: به امید آزادی
 description: 
 published: true
-date: 2026-01-11T16:54:06.051Z
+date: 2026-01-12T23:53:52.456Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-10T12:17:41.400Z
@@ -99,14 +99,17 @@ dateCreated: 2026-01-10T12:17:41.400Z
 ## دلتاچت (DeltaChat) و پیام‌رسان‌ها
 - **سرورهای داخلی:**
   - `tiiiz.ir` (سرور دلتاچت)
+  - `tpmovies.ir` (سرور دلتاچت)
+  - `5.202.8.247` (سرور دلتاچت)
+  - `dfgr.paperwing.xyz` (سرور دلتاچت)
   - `wiiz.ir` (سرور ماتریکس داخلی - Element)
 - **دانلود کلاینت دلتاچت:**
   - [نسخه اندروید (گیت‌لب)](https://gitlab.aranserver.com/abbas/deltachat-app)
   - [نسخه ویندوز و لینوکس (دانشگاه علم و صنعت)](https://drive.iust.ac.ir/index.php/s/Q8JRAogiQz7D7yP)
 - **آموزش راه‌اندازی سریع:**
-  1. درصورت عدم اتصال : تنظیم DNS مودم روی `5.200.200.200`.
-  2. بازکردن کلاینت و انتخاب "Create new profile" و سپس "Use Other server".
-  3. کپی عبارت `DCACCOUNT:https://tiiiz.ir/new` و استفاده از گزینه "Paste from clipboard" در بخش اسکن کد.
+  1.  تنظیم DNS مودم روی `5.200.200.200`.
+   2. بازکردن کلاینت و انتخاب "Create new profile" و سپس "Use Other server".
+  3. کپی عبارت `DCACCOUNT:https://tiiiz.ir/new`(این لینک برای سرور تیز میباشد برای سرور های دیگر میتواند دامنه های خودشان را جایگزین کنید) و استفاده از گزینه "Paste from clipboard" در بخش اسکن کد.
 
 ## ابزارهای آفلاین و اشتراک‌گذاری
 - **Kiwix (ویکی‌پدیا آفلاین):**
