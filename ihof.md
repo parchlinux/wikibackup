@@ -2,7 +2,7 @@
 title: به امید آزادی
 description: 
 published: true
-date: 2026-01-13T15:01:50.257Z
+date: 2026-01-13T21:20:38.462Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-10T12:17:41.400Z
@@ -123,3 +123,21 @@ dateCreated: 2026-01-10T12:17:41.400Z
   - [Ulni Pastebin (با قابلیت رمزنگاری)](https://m.ulni.ir/)
   - [آپلودکن (آپلود فایل)](https://uploadkon.ir)
   - [پیکوفایل (آپلود فایل)](https://www.picofile.com)
+
+---
+
+> ## لیستی از کتاب های مرتبط با برنامه نویسی
+>    - [c in the nutshell](https://s34.picofile.com/file/8489099476/C_in_a_Nutshell_The_Definitive_Refere_Z_Library_.pdf.html)
+>    - [Dance with Linux](https://s34.picofile.com/file/8489099634/Dance_with_Linux_11_22.pdf.html)
+>    - [Getting Started with SQL A Hands-On Approach for Beginners (Thomas Nield) ](https://s34.picofile.com/file/8489099600/Getting_Started_with_SQL_A_Hands_On_Approach_for_Beginners_Thomas_Nield_Z_Library_.pdf.html)
+>    - [Hands-on Machine Learning with Scikit-Learn, Keras, and TensorFlow (Aurélien Géron)](https://s34.picofile.com/file/8489100168/Hands_on_Machine_Learning_with_Scikit_Learn_Keras_and_TensorFlow_Aur%C3%A9lien_G%C3%A9ron_Z_Library_.pdf.html)
+>    - [Linux Basics for Hackers Getting Started with Networking, Scripting, and Security in Kali (OccupyTheWeb)](https://s34.picofile.com/file/8489100134/Linux_Basics_for_Hackers_Getting_Started_with_Networking_Scripting_and_Security_in_Kali_OccupyTheWeb_Z_Library_.epub.html)
+>    - [Prompt Engineering for LLMs ](https://s34.picofile.com/file/8489100118/Prompt_Engineering_for_LLMs_The_Art_a_Z_Library_.epub.html)
+>    - [The Art Of Deception (Kevin Mitnick) ](https://s34.picofile.com/file/8489100042/The_Art_Of_Deception_Kevin_Mitnick_Z_Library_.pdf.html)
+>    - [The Art of Invisibility (Kevin Mitnick)](https://s34.picofile.com/file/8489099792/The_Art_of_Invisibility_The_Worlds_Mo_Z_Library_.pdf.html)
+>    - [The Linux Command Line A Complete Introduction, 2nd Edition (William E. Shotts)](https://s34.picofile.com/file/8489099518/The_Linux_Command_Line_A_Complete_Introduction_2nd_Edition_William_E_Shotts_Z_Library_.pdf.html)
+>    - [The Master Algorithm How the Quest for the Ultimate Learning Machine Will Remake Our World (Pedro Domingos)](https://s34.picofile.com/file/8489100142/The_Master_Algorithm_How_the_Quest_for_the_Ultimate_Learning_Machine_Will_Remake_Our_World_Pedro_Domingos_Z_Library_.pdf.html) 
+> 
+{.is-info}
+---
+
