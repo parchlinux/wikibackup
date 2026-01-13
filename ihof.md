@@ -2,7 +2,7 @@
 title: به امید آزادی
 description: 
 published: true
-date: 2026-01-13T22:20:05.313Z
+date: 2026-01-13T22:20:11.265Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-10T12:17:41.400Z
