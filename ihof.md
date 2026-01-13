@@ -2,7 +2,7 @@
 title: به امید آزادی
 description: 
 published: true
-date: 2026-01-13T22:20:11.265Z
+date: 2026-01-13T22:21:32.667Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-10T12:17:41.400Z
@@ -26,7 +26,6 @@ dateCreated: 2026-01-10T12:17:41.400Z
   - `maddy.bokhari.ir` (سرور دلتاچت)
   - `delta.ctarget.shop` (سرور دلتاچت)
   - `94.183.172.60:80` (سرور دلتاچت)
-  - `tpmovies.ir` (سرور دلتاچت)
   - `5.202.8.247` (سرور دلتاچت)
   - `dfgr.paperwing.xyz` (سرور دلتاچت)
   - `wiiz.ir` (سرور ماتریکس داخلی - Element)
