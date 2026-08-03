@@ -2,45 +2,44 @@
 title: XAMPP
 description: 
 published: true
-date: 2024-07-26T09:34:57.689Z
-tags: xampp, apache, php
+date: 2024-11-20T15:12:16.989Z
+tags: xampp, php, آپاچی, پهپ
 editor: markdown
-dateCreated: 2024-07-26T09:34:43.803Z
+dateCreated: 2024-11-20T13:44:50.986Z
 ---
 
 # XAMPP
-> XAMPP is an easy to install Apache distribution containing MariaDB, PHP, Perl and ProFTPD. It contains: Apache, MariaDB, PHP & PEAR, Perl, ProFTPD, phpMyAdmin, OpenSSL, GD, Freetype2, libjpeg, libpng, gdbm, zlib, expat, Sablotron, libxml, Ming, Webalizer, pdf class, ncurses, mod_perl, FreeTDS, gettext, mcrypt, mhash, eAccelerator, SQLite and IMAP C-Client. 
+> XAMPP یک توزیع آپاچی با نصب آسان است که حاوی برنامه‌های MariaDB، PHP، Perl و ProFTPD می‌باشد، همچنین شامل برنامه های:
+Apache, MariaDB, PHP & PEAR, Perl, ProFTPD, phpMyAdmin, OpenSSL, GD, Freetype2, libjpeg, libpng, gdbm, zlib, expat, Sablotron, libxml, Ming, Webalizer, pdf class, ncurses, mod_perl, FreeTDS, gettext, mcrypt, mhash, eAccelerator, SQLite و IMAP C-Client نیز می‌شود.
 
-
-## Installation
-
-You can install XAMPP from aur using Paru in Parch Linux:
+## نصب کردن
+شما می‌توانید XAMPP را از AUR به کمک  paru در پارچ لینوکس نصب کنید:
 
 ```bash
 paru -S xampp 
 ```
 
-## Configuration
+## کانفیگ کردن
 
-The default configuration should work out of the box. Setting the individual parts of XAMPP can by made by editing following files: 
+کانفیگ پیش‌فرض باید خارج از جعبه کار کند. با ویرایش فایل های زیر می توانیم بخش های مختلف XAMPP را تنظیم کنیم: 
 
-- ```/opt/lampp/etc/httpd.conf``` — Apache configuration. For example you can change folder with web page's source files.
-- ```/opt/lampp/etc/php.ini``` — PHP configuration.
-- ```/opt/lampp/phpmyadmin/config.inc.php``` — phpMyAdmin configuration.
-- ```/opt/lampp/etc/proftpd.conf``` — ProFTPD configuration.
-- ```/opt/lampp/etc/my.cnf``` — MySQL configuration.
+- ```/opt/lampp/etc/httpd.conf``` — کانفیگ آپاچی. برای مثال شما میتوانید پوشه حاوی فایل‌های متعلق به وب‌پیچ را عوض کنید.
+- ```/opt/lampp/etc/php.ini``` — کانفیگ PHP.
+- ```/opt/lampp/phpmyadmin/config.inc.php``` — کانفیگ phpMyAdmin.
+- ```/opt/lampp/etc/proftpd.conf``` — کانفیگ ProFTPD.
+- ```/opt/lampp/etc/my.cnf``` — کانفیگ MySQL.
 
-If you would like to set up security of server, just run:
+اگر فقط می‌خواهید امنیت سرور را تنظیم کنید؛ این را اجرا کنید:
 ```bash
 /opt/lampp/xampp security
 ```
 
-## Usage
-Use the following commands to control XAMPP: 
+## استفاده
+برای کنترل XAMPP دستور آورده شده در زیر را وارد کنید:
 
 ```bash
 /opt/lampp/xampp start,stop,restart
 ```
 
-**Alternatively**, you can start, stop, or restart ```xampp.service```.
+**به عنوان جایگزین**, شما می‌توانید سرویس ```xampp.service``` را شروع یا متوقف یا مجددا راه اندازی کنید.
 

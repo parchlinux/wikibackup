@@ -2,7 +2,7 @@
 title: مجازی سازی در پارچ لینوکس
 description: 
 published: true
-date: 2025-12-07T18:08:32.502Z
+date: 2025-12-07T18:08:36.711Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-30T14:06:15.896Z

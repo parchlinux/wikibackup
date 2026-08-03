@@ -2,7 +2,7 @@
 title: NeoVim به عنوان IDE
 description: معرفی NeoVim همراه با چگونگی به‌کارگیری NeoVim مانند IDE های محبوب
 published: true
-date: 2025-10-30T16:46:03.175Z
+date: 2025-10-30T16:46:06.409Z
 tags: ide, vim, neovim, ویم, nvim, نئوویم
 editor: markdown
 dateCreated: 2025-02-08T12:37:50.156Z

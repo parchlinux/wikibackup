@@ -2,7 +2,7 @@
 title: مهاجرت از ویندوز به پارچ‌لینوکس در ۵ گام
 description: مهاجرت از ویندوز به پارچ لینوکس در ۵ گام
 published: true
-date: 2025-09-22T07:39:55.958Z
+date: 2025-09-22T07:40:00.695Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-21T07:16:02.577Z

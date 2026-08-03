@@ -1,92 +1,94 @@
 ---
-title: IDEs in Parch
-description: Introduction and tutorial for installing popular IDEs on Parch Linux
+title: IDEها در پارچ
+description: معرفی و آموزش نصب IDEهای محبوب در پارچ لینوکس
 published: true
-date: 2025-02-13T07:51:44.751Z
-tags: ide, ides, vscode, code, jetbrains, editor, development, programing
+date: 2026-04-17T13:29:46.494Z
+tags: ide, ides, vscode, code, editor, development, programing, برنامه‌نویسی, ادیتور, کد
 editor: markdown
-dateCreated: 2025-02-08T12:54:47.718Z
+dateCreated: 2025-02-07T18:55:15.321Z
 ---
 
-# Integrated Development Environment (IDE)
+# ابزارهای توسعه نرم‌افزار (IDE)
 
-## Overview
-Integrated Development Environments (IDEs) are environments that include a text editor, project management tools, a debugger, and other tools for software development.
+## درباره
+ابزارهای توسعه نرم‌افزار (Integrated Development Environment - IDE) محیط‌هایی هستند که شامل ویرایشگر متن، مدیریت پروژه، دیباگر(Debuger) و ابزارهای دیگر برای توسعه نرم‌افزار می‌باشند.
 
-## Popular IDEs
+
+
+## IDE‌های محبوب
 
 ### 1. **Visual Studio Code**
-Visual Studio Code (VS Code) is one of the most popular and widely used code editors developed by Microsoft.
+Visual Studio Code (VS Code) یکی از محبوب‌ترین و پرکاربرترین ویرایشگرهای کد است که توسط Microsoft توسعه داده شده.
 
-#### Available Versions:
-- **Code - OSS**: The official open-source package from Arch Linux. This version includes a configuration to enable [Open VSX](https://open-vsx.org/).  
-  **Installation:**
-  ```bash
-  sudo pacman -S code
-  ```
+#### نسخه‌های موجود:
+- **Code - OSS**: بسته منبع‌باز رسمی آرچ لینوکس. این نسخه یک پیکربندی برای فعال‌سازی [Open VSX](https://open-vsx.org/) دارد. 
+نصب:
+```bash
+sudo pacman -S code
+```
+  
+- **Visual Studio Code**: نسخه اختصاصی و مالکیتی مایکروسافت.  
+نصب:
+```bash
+paru -S visual-studio-code-bin
+```
 
-- **Visual Studio Code**: The proprietary version owned by Microsoft.  
-  **Installation:**
-  ```bash
-  yay -S visual-studio-code-bin
-  ```
-
-- **VSCodium**: A community-driven free version that does not send telemetry data to service providers and provides [Open VSX](https://open-vsx.org/) support.  
-  **Installation:**
-  ```bash
-  yay -S vscodium
-  ```
+- **VSCodium**: نسخه آزاد جامعه که داده‌های مربوط به رفتار نرم‌افزار را به سرویس‌دهندگان ارسال نمی‌کند و پیکربندی [Open VSX](https://open-vsx.org/) را فراهم می‌کند.  
+**نصب:**
+```bash
+paru -S vscodium-bin
+```
 
 ### 2. **JetBrains IntelliJ IDEA**
-IntelliJ IDEA is a professional IDE for Java software development. It offers powerful features for code development, project management, and testing.  
-**Installation:**
+IntelliJ IDEA یک IDE حرفه‌ای برای توسعه نرم‌افزارهای Java است. این ابزار دارای ویژگی‌های قدرتمندی برای توسعه کد، مدیریت پروژه و تست است.
+**نصب:**
 ```bash
 sudo pacman -S intellij-idea-community-edition
 ```
 
 ### 3. **Eclipse**
-Eclipse is a free IDE for Java software development that supports multiple programming languages.  
-**Installation:**
+Eclipse یک IDE آزاد برای توسعه نرم‌افزارهای Java است که از زبان های متنوعی پشتیبانی میکند. 
+**نصب:**
 ```bash
-sudo pacman -S eclipse-java-bin
+paru -S eclipse-java-bin
 ```
 
 ### 4. **PyCharm**
-PyCharm is a dedicated IDE for the Python programming language developed by JetBrains.  
-**Installation:**
+PyCharm یک IDE اختصاصی برای زبان برنامه‌نویسی Python است که توسط JetBrains توسعه یافته است.
+**نصب:**
 ```bash
 sudo pacman -S pycharm-community-edition
 ```
 
-### 5. **Zed**
-Zed is a new code editor built with the Rust programming language, focusing on speed, collaboration, and artificial intelligence (AI), supporting various programming languages.  
-**Installation:**
+### 5. Zed
+Zed یک ویرایشگر کد جدید است که با زبان برنامه‌نویسی Rust ساخته شده و بر سرعت، همکاری و هوش مصنوعی (AI) تمرکز دارد و از زبان های مختلف پشتیبانی میکند.
+**نصب:**
 ```bash
 sudo pacman -S zed
 ```
 
-### 6. **Atom/Pulsar**
-Pulsar is an open-source text editor that continues the development of Atom after GitHub officially ceased its development. It is designed for a lightweight and customizable experience.  
-**Installation:**
+### 6. Atom/Pulsar
+Pulsar یک ویرایشگر متن منبع‌باز است Pulsar یک ویرایشگر متن آزاد است که پس از توقف رسمی توسعه Atom توسط GitHub، توسط جامعه توسعه دهندگان توسعه یافته و به طور خاص برای تجربه‌ای سبک و قابل شخصی‌سازی طراحی شده است.
+**نصب:**
 ```bash
-yay -S pulsar
+paru -S pulsar
 ```
 
-### 7. **NetBeans**
-NetBeans is a free and powerful IDE developed by Oracle, primarily designed for Java software development. It also supports other programming languages.  
-**Installation:**
+### 7. NetBeans
+NetBeans یک IDE آزاد و قدرتمند است که توسط Oracle توسعه داده شده و به طور اصلی برای توسعه نرم‌افزارهای Java طراحی شده است. این ابزار از زبان‌های برنامه‌نویسی دیگر نیز پشتیبانی می‌کند
+**نصب:**
 ```bash
 sudo pacman -S netbeans
 ```
 
-### 8. **All JetBrains products**
-JetBrains Toolbox is a tool that allows you to easily manage and install JetBrains IDEs, such as IntelliJ IDEA, PyCharm, WebStorm, and more. It provides automatic updates and the ability to switch between different versions of JetBrains products.
-**Installation:**
+### 8. **JetBrains Toolbox**
+جعبه ابزار جتبرینز یک نرم‌افزار مدیریتی است که به شما امکان می‌دهد تا IDE‌های مختلف جتبرینز مانند IntelliJ IDEA، PyCharm، WebStorm و... را به راحتی نصب و مدیریت کنید. این ابزار از ویژگی‌هایی مانند بروزرسانی خودکار و جابه‌جایی بین نسخه‌های مختلف پشتیبانی می‌کند.
+**نصب:**
 ```bash
-sudo pacman -S jetbrains-toolbox
+paru -S jetbrains-toolbox
 ```
 
-### 9. **Vim/NeoVim**
-NeoVim alone is not a complete IDE, but with the use of numerous plugins developed for it, it can be transformed into a development environment similar to an IDE.  
-> For more details about NeoVim and how to convert it into a full-fledged IDE, you can refer to the [NeoVim page](https://wiki.parchlinux.com/en/neovim) in the Parch Wiki.
+### 8. Vim/NeoVim
+NeoVim به تنهایی یک IDE کامل نیست، اما با به‌کارگیری افزونه‌های فراوانی که برای آن توسعه یافته می‌توان آن را به یک محیط توسعه مشابه IDE تبدیل کرد.
+> برای جزئیات بیشتر درباره NeoVim و چگونگی تبدیل آن به یک IDE کامل، می‌توانید به [صفحه مربوط به Neovim در ویکی پارچ](https://wiki.parchlinux.com/fa/neovim) مراجعه کنید.
 {.is-info}

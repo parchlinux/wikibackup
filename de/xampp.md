@@ -2,7 +2,7 @@
 title: XAMPP
 description: 
 published: true
-date: 2025-05-08T11:22:18.562Z
+date: 2025-05-08T11:22:24.213Z
 tags: xampp, apache, php
 editor: markdown
 dateCreated: 2025-05-08T11:22:18.562Z

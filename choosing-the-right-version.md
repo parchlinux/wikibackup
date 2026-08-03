@@ -1,66 +1,214 @@
 ---
-title: Choosing the right version
-description: 
+title: کدام نسخه از پارچ لینوکس برای من مناسب است؟
+description: این ویکی رسمی برای پارچ لینوکس است.
 published: true
-date: 2024-05-05T09:53:21.241Z
+date: 2026-04-17T14:32:03.965Z
 tags: 
 editor: markdown
-dateCreated: 2024-05-05T09:53:15.593Z
+dateCreated: 2024-05-07T15:31:48.197Z
 ---
 
-# Which version of Parch Linux is right for me?	
+# پارچ لینوکس نسخه پلاسما
+### میزکار پلاسما (Plasma Desktop) چیست؟ 
+یک محیط پر امکانات و بسیار قابل تنظیم که یک تجربه کاربری مدرن و بصری را ارائه می دهد. این محیط به خاطر انعطاف پذیری، گزینه های گسترده شخصی سازی و طیف وسیعی از برنامه ها و ابزار شناخته شده است.
 
-## Parch Linux Plasma Edition
+<img src="https://github.com/parchlinux/parch-iso-plasma/raw/main/image/screenshot.png" alt="اسکرین شات از محیط دسکتاپ KDE Plasma">
 
-### What is Plasma Desktop?
+### نرم افزارهای پیش نصب شده در پلاسما
 
-KDE Plasma is a feature-rich and highly customizable desktop environment that offers a modern and intuitive user experience. It is known for its flexibility, extensive customization options, and a wide range of applications and tools.
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-![screenshot](https://github.com/parchlinux/parch-iso-plasma/raw/main/image/screenshot.png)
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
 
-### Pre-Installed Applications
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>نام برنامه</th>
+      <th>توضیح</th>
+      <th>دسته</th>
+    </tr>
+    <tr>
+      <td>Tokodon</td>
+      <td>کلاینتی برای مرور فدی‌ورس</td>
+      <td>شبکه‌های اجتماعی</td>
+    </tr>
+    <tr>
+      <td>NeoChat</td>
+      <td>کلاینتی برای مرور ماتریکس</td>
+      <td>شبکه‌های اجتماعی</td>
+    </tr>
+    <tr>
+      <td>Haruna</td>
+      <td>پخش‌کننده انواع رسانه از جمله فیلم و موسیقی نوشته شده با QT</td>
+      <td>چندرسانه ای</td>
+    </tr>
+    <tr>
+      <td>Strawberry</td>
+      <td>پخش‌کننده موسیقی ساده و آسان برای استفاده، نوشته شده با C++ و QT</td>
+      <td>چندرسانه ای (موسیقی)</td>
+    </tr>
+    <tr>
+      <td>Zen Browser</td>
+      <td>مرورگر وب سریع، خصوصی و امن</td>
+      <td>وب‌گردی</td>
+    </tr>
+    <tr>
+      <td>MarkNote</td>
+      <td>یادداشت برداری با مارکداون</td>
+      <td>بهره‌وری</td>
+    </tr>
+  </table>
+</body>
+</html>
 
-| Name         | Usage     | Category |
-|--------------|-----------|------------|
-| Tokodon         | A client to Browse the fediverse.      | Social        |
-| Neochat      | A client to Browse the [Matrix].  | Social       |
-| PlasmaTube | A client to watch peertube and piped youtube | Movie & Music |
-| VLC | A Video Player written in QT | Movie & Music |
-| Elisa | A Simple and easy to use Music Player written in cpp and Kirigami | Movie & Music | 
-| Firefox | Fast, Private & Safe Web Browser | Web Browser |
-| MarkNote | Take notes in Markdown | Productivity |
+# پارچ لینوکس نسخه گنوم
+### میزکار گنوم (GNOME Desktop) چیست؟
+یک محیط دسکتاپ کاربرپسند و مدرن است که تجربه‌ای روان و بصری برای کاربر فراهم می‌کند. این محیط با در نظر گرفتن سادگی، دسترسی‌پذیری و قابلیت شخصی‌سازی طراحی شده است. گنوم طیف وسیعی از ویژگی‌ها و برنامه‌ها را ارائه می‌دهد، از جمله یک مدیر فایل، یک مرورگر وب، یک ویرایشگر متن و مجموعه‌ای از ابزارهای کاربردی.
+
+<img src="https://github.com/parchlinux/Parch-iso-gnome/raw/main/image/screenshot.png" alt="اسکرین شات از محیط دسکتاپ KDE Plasma">
+
+### نرم افزارهای پیش نصب شده در گنوم
 
 
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-## Parch Linux Gnome Edition
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <thead>
+      <tr>
+        <th>نام</th>
+        <th>کاربرد</th>
+        <th>دسته بندی</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tuba</td>
+        <td>مروگر فدیورس</td>
+        <td>شبکه‌های اجتماعی</td>
+      </tr>
+      <tr>
+        <td>Fractal</td>
+        <td>مروگر ماتریکس</td>
+        <td>شبکه‌های اجتماعی</td>
+      </tr>
+      <tr>
+        <td>PipeLine</td>
+        <td>تماشای پیرتوب و یوتیوب</td>
+        <td>سرگرمی (ویدیو)</td>
+      </tr>
+      <tr>
+        <td>Celluloid</td>
+        <td>رابط کاربری MPV با GTK</td>
+        <td>سرگرمی (فیلم و موسیقی)</td>
+      </tr>
+      <tr>
+        <td>G4Music</td>
+        <td>پخش کننده موسیقی ساده و آسان</td>
+        <td>سرگرمی (موسیقی)</td>
+      </tr>
+      <tr>
+        <td>Zen Browser</td>
+        <td>مرورگر وب سریع، خصوصی و امن</td>
+        <td>وب‌گردی</td>
+      </tr>
+      <tr>
+        <td>Folio</td>
+        <td>یادداشت برداری با مارکداون</td>
+        <td>بهره‌وری</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+
+# کدام را انتخاب کنیم؟
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ترجمه و مقایسه Gnome و Plasma</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
 
 
-### What is Gnome Desktop?
+  <table>
+    <thead>
+      <tr>
+        <th>گنوم</th>
+        <th>پلاسما</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>امکانات کمتر</td>
+        <td>امکانات بیشتر</td>
+      </tr>
+      <tr>
+        <td>بهتر - GTK</td>
+        <td>بهتر - QT</td>
+      </tr>
+      <tr>
+        <td>کمتر سفارشی سازی، اما ساده تر</td>
+        <td>قابلیت های بیشتر، اما یادگیری پیچیده تر</td>
+      </tr>
+    </tbody>
+  </table>
 
-GNOME is a user-friendly and modern desktop environment that provides a seamless and intuitive user experience. It is designed with simplicity, accessibility, and customization in mind. GNOME offers a wide range of features and applications, including a file manager, a web browser, a text editor, and a variety of productivity tools.
-
-
-![screenshot](https://github.com/parchlinux/Parch-iso-gnome/raw/main/image/screenshot.png)
-
-
-### Pre-Installed Applications in Gnome
-
-| Name         | Usage     | Category |
-|--------------|-----------|------------|
-| Tuba         | A client to Browse the fediverse.      | Social        |
-| Fractal      | A client to Browse the [Matrix].  | Social       |
-| PipeLine | A client to watch peertube and piped youtube | Movie & Music |
-| Celluloid | A MPV front-end written in GTK | Movie & Music |
-| G4Music | A Simple and easy to use Music Player written in vala and GTK | Movie & Music | 
-| Firefox | Fast, Private & Safe Web Browser | Web Browser |
-| Folio | Take notes in Markdown | Productivity |
-
-
-## Which one to choose?
-
-| Gnome | Plasma |
-|-----|------|
-| Less features | More features|
-| Less customization, but simpler | More customization, but steeper learning curve|
-| Better GTK support | Better QT support|
 

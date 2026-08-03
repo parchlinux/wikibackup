@@ -2,7 +2,7 @@
 title: عیب‌یابی و رفع‌مشکل پیشرفته
 description: 
 published: true
-date: 2025-11-13T23:15:32.190Z
+date: 2025-11-13T23:15:36.174Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-13T23:15:32.190Z

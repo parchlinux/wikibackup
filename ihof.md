@@ -2,7 +2,7 @@
 title: به امید آزادی
 description: 
 published: true
-date: 2026-01-13T22:21:32.667Z
+date: 2026-03-13T19:25:25.878Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-10T12:17:41.400Z
@@ -17,25 +17,9 @@ dateCreated: 2026-01-10T12:17:41.400Z
 ### هشدار امنیتی و نکات مهم
 توصیه می‌شود به این وب‌سایت‌ها اعتماد کامل نکنید، اما برای رفع نیازهای فوری کاربردی هستند.
 - هنگام دانلود از سایت‌های ایرانی (به‌ویژه سافت۹۸)، مراقب تغییرات احتمالی در فایل‌های نصبی باشید.
-- از ارسال فایل‌های بسیار حجیم روی سرورهای داخلی (مانند tiiiz.ir) خودداری کنید تا ظرفیت سرور پر نشود.
+- از ارسال فایل‌های بسیار حجیم روی سرورهای داخلی خودداری کنید تا ظرفیت سرور پر نشود.
 - برای محتوای حساس، حتما از قابلیت رمزنگاری استفاده کنید.
-## دلتاچت (DeltaChat) و پیام‌رسان‌ها
-- **سرورهای داخلی:**
-  - `tiiiz.ir` (سرور دلتاچت)
-  - `chatmail.bokhari.ir` (سرور دلتاچت)
-  - `maddy.bokhari.ir` (سرور دلتاچت)
-  - `delta.ctarget.shop` (سرور دلتاچت)
-  - `94.183.172.60:80` (سرور دلتاچت)
-  - `5.202.8.247` (سرور دلتاچت)
-  - `dfgr.paperwing.xyz` (سرور دلتاچت)
-  - `wiiz.ir` (سرور ماتریکس داخلی - Element)
-- **دانلود کلاینت دلتاچت:**
-  - [نسخه اندروید (گیت‌لب)](https://gitlab.aranserver.com/abbas/deltachat-app)
-  - [نسخه ویندوز و لینوکس (دانشگاه علم و صنعت)](https://drive.iust.ac.ir/index.php/s/Q8JRAogiQz7D7yP)
-- **آموزش راه‌اندازی سریع:**
-  1.  تنظیم DNS مودم روی `5.200.200.200`.
-   2. بازکردن کلاینت و انتخاب "Create new profile" و سپس "Use Other server".
-  3. کپی عبارت `DCACCOUNT:https://tiiiz.ir/new`(این لینک برای سرور تیز میباشد برای سرور های دیگر میتواند دامنه های خودشان را جایگزین کنید) و استفاده از گزینه "Paste from clipboard" در بخش اسکن کد.
+
 ## جستجوگرهای وب
 - [گردو (Gerdoo)](https://gerdoo.me)
 - [ذرہ‌بین (Zarebin)](https://zarebin.ir)
@@ -96,7 +80,10 @@ dateCreated: 2026-01-10T12:17:41.400Z
 - [پادکست رخ](https://rokhpodcast.ir)
 - [آوا پدیا](https://avapedia.com)
 
-## ابزارها و کلاینت‌های شبکه (VPN & Tunnel)
+## ابزارها و کلاینت‌های شبکه (VPN & Tunnel) 
+>ما امنیت این ابزارها را تضمین نمی‌کنیم، در شرایط حال حاضر صرفاً در اینجا قرار گرفته‌اند زیرا می‌توانند در برخی از سناریوها مفید باشند. 
+{.is-warning}
+
 - [Vpn Client Pro](https://s34.picofile.com/file/8486476326/VPN_Client_Pro_MiTiVPN.apk.html)
 - [OpenVpn Connect](https://s34.picofile.com/file/8486476268/OpenVPN_Connect_MiTiVPN.apk.html)
 - [NetMod Android](https://s34.picofile.com/file/8486476242/NetMod_MiTiVPN.apk.html)
@@ -110,17 +97,25 @@ dateCreated: 2026-01-10T12:17:41.400Z
 - **میرورهای داخلی:**
   - [ میرور آروان کلود](https://mirror.arvancloud.ir)
   - [ میرور دانشگاه صنعتی اصفهان](https://repo.iut.ac.ir/)
+  - [ میرور مبین‌هاست](https://mirror.mobinhost.com/) 
 - **ویکی آرچ آفلاین:**
   - نصب با دستور: `sudo pacman -S arch-wiki-lite arch-wiki-docs`
 - **داکیومنت آفلاین:**
   - ابزار `zeal` برای مشاهده داکیومنت‌ها. نصب با دستور: `sudo pacman -S zeal`
 
+### منابع مخصوص توسعه نرم‌افزار و داکیومنت آفلاین:
 
+- داکیومنت‌های آفلاین پارچ لینوکس
+https://docs.parchlinux.com
+
+- داکیومنت‌های آفلاین پاراگراف
+https://wiki.prgph.ir
 
 ## ابزارهای آفلاین و اشتراک‌گذاری
 - **Kiwix (ویکی‌پدیا آفلاین):**
   - [اپلیکیشن اندروید](https://uploadkon.ir/uploads/d2d110_26kiwix.zip)
   - [فایل داده ویکی‌پدیا فارسی](https://uploadkon.ir/uploads/068210_26fawiki.zip)
+
 - **اشتراک‌گذاری متن و فایل:**
   - [Ulni Pastebin (با قابلیت رمزنگاری)](https://m.ulni.ir/)
   - [آپلودکن (آپلود فایل)](https://uploadkon.ir)

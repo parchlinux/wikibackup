@@ -2,7 +2,7 @@
 title: همکاری در فارسی سازی نرم‌افزارها
 description: 
 published: true
-date: 2025-10-30T16:39:46.815Z
+date: 2025-10-30T16:39:51.021Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-20T21:07:17.002Z

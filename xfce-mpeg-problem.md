@@ -2,7 +2,7 @@
 title: رفع خطای کدک MPEG در XFCE
 description: 
 published: true
-date: 2025-10-16T10:05:06.811Z
+date: 2025-10-16T10:05:09.531Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-16T10:04:45.949Z

@@ -1,0 +1,50 @@
+<!--
+title: Virtualization on Parch Linux
+description: Virtualization is creating a virtual machine, containing an OS that works within your main system.
+published: true
+date: 2024-05-21T21:15:23.646Z
+tags: parch, virtual, virtualization
+editor: ckeditor
+dateCreated: 2024-05-21T18:48:02.541Z
+-->
+
+<h2>What is <strong>virtualization?</strong></h2>
+<p>From <a href="https://en.wikipedia.org/wiki/Virtualization">Wikipedia</a>:</p>
+<blockquote>
+  <p>In computing, <strong>virtualization</strong> is the act of creating a virtual (rather than actual) version of something at the same abstraction level, including virtual <a href="https://en.wikipedia.org/wiki/Computer_hardware">computer hardware</a> platforms, <a href="https://en.wikipedia.org/wiki/Data_storage_device">storage devices</a>, and <a href="https://en.wikipedia.org/wiki/Computer_network">computer network</a> resources.</p>
+</blockquote>
+<p>A virtual machine is a simulated computer running inside another computer. The simulated computer is often called guest, while the real machine is called host.</p>
+<p>Popular examples of virtualization client softwares includes <a href="https://www.virtualbox.org/">Oracle VirtualBox</a>, <a href="https://help.gnome.org/users/gnome-boxes/stable/">GNOME Boxes</a>, <a href="https://www.vmware.com/products/workstation-player.html">VMware Workstation</a> <i>(Not FOSS)</i> and <a href="https://www.qemu.org/">QEMU</a>.</p>
+<p><i>While you're free to choose what client software you want to use, <strong>we recommend you to use </strong></i><a href="https://help.gnome.org/users/gnome-boxes/stable/"><i><strong>GNOME Boxes</strong></i></a><i>.</i></p>
+<h2>GNOME Boxes</h2>
+<blockquote>
+  <p>Boxes is an application that gives you access to virtual machines, running locally or remotely. It also allows you to connect to the display of a remote computer.</p>
+</blockquote>
+<h3>Installing Boxes</h3>
+<p>Installing Boxes on Parch is easy as alphabet. All you have to do is to run <code>sudo pacman -S gnome-boxes</code> in your terminal and reboot afterwards. You'll see Boxes after your computer boots up.</p>
+<h2>Oracle VirtualBox</h2>
+<blockquote>
+  <p>VirtualBox is a powerful x86 and AMD64/Intel64 <a href="https://www.virtualbox.org/wiki/Virtualization">virtualization</a> product for enterprise as well as home use. Not only is VirtualBox an extremely feature rich, high performance product for enterprise customers, it is also the only professional solution that is freely available as Open Source Software under the terms of the <a href="https://www.virtualbox.org/wiki/GPLv3">GNU General Public License (GPL) version 3</a>.</p>
+</blockquote>
+<h3>Installing VirtualBox</h3>
+<p>You can install the core package of VirtualBox by running <code>sudo pacman -S virtualbox</code>.</p>
+<p>Next, you should run <code>sudo pacman -S virtualbox-host-dkms</code>.&nbsp;</p>
+<p>To compile the VirtualBox modules provided by <a href="https://archlinux.org/packages/?name=virtualbox-host-dkms">virtualbox-host-dkms</a>, you'll also need to to install the appropriate headers packages for your installed kernel, for example:</p>
+<ul>
+  <li><code>sudo pacman -S linux-headers</code>&nbsp;for <a href="https://archlinux.org/packages/?name=linux">Linux</a> kernel</li>
+  <li><code>sudo pacman -S linux-lts-headers</code> for Linux-LTS kernel</li>
+  <li><code>sudo pacman -S linux-zen-headers</code> for Linux-ZEN kernel</li>
+  <li><code>sudo pacman -S linux-hardened-headers</code> for Linux-HARDENED kernel</li>
+</ul>
+<p>Don't forget to reboot after installing.</p>
+<h3>Enabling additional features of VirtualBox</h3>
+<blockquote>
+  <p>The <i>Oracle VirtualBox Extension Pack</i> provides <a href="https://www.virtualbox.org/manual/ch01.html#intro-installing">additional features</a> and is released under a non-free license <strong>only available for personal use</strong>. To install it, the <a href="https://aur.archlinux.org/packages/virtualbox-ext-oracle/">virtualbox-ext-oracle</a><sup>AUR</sup> package is available.</p>
+</blockquote>
+<p>For some reasons, additional features on VirtualBox <i>(e.g. mounting an external media device like an USB stick to the guest) </i>are not included in the core package and you need to install the extension pack to use these features.</p>
+<p>You can install this package and use these features by:&nbsp;</p>
+<ol>
+  <li>Running <code>paru -S virtualbox-ext-oracle --noconfirm</code> on your terminal. (<code><i>paru</i></code><i> </i>comes included by default in Parch Linux, but you may want to use <code><i>yay</i></code><i> </i>or <code><i>aura</i></code><i> </i>instead.)</li>
+  <li>Running <code>sudo usermod -aG vboxusers <i>YOUR-USERNAME</i></code><i> </i>on your terminal. (Put your username instead of <code><i>YOUR-USERNAME</i></code><i> </i>in the command.)</li>
+</ol>
+<p>At the end, don't forget to reboot, since it is necessary.</p>

@@ -2,7 +2,7 @@
 title: aria2
 description: aria2 یک ابزار دانلود تحت خط فرمان سبک، دارای چندین پروتکل برای دانلود و همچنین قابلیت دانلود همزمان هست.
 published: true
-date: 2025-09-21T17:45:54.940Z
+date: 2025-09-21T17:45:58.765Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-01T15:02:29.355Z

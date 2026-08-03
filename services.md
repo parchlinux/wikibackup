@@ -2,7 +2,7 @@
 title: لیستی از ابزارهای پروژه پارچ
 description: در این صفحه بخشی از سرویس‌‌ها و خدمات پارچ لیست شده است
 published: true
-date: 2026-02-25T17:04:55.428Z
+date: 2026-02-25T17:04:59.669Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-26T17:42:05.702Z

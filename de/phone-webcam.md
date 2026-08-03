@@ -2,7 +2,7 @@
 title: Die Nutzung Ihres Android-Telefons als Webcam
 description: 
 published: true
-date: 2025-05-15T11:32:21.302Z
+date: 2025-05-15T11:32:26.984Z
 tags: parch, parchlinux, scrcpy, webcam
 editor: markdown
 dateCreated: 2025-05-15T11:32:21.302Z

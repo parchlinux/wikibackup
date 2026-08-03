@@ -1,71 +1,57 @@
 ---
-title: Waydroid on Parch Linux
-description: How to run android apps in Parch?
+title: وی‌دروید
+description: Waydroid در پارچ لینوکس
 published: true
-date: 2024-07-22T16:02:53.406Z
-tags: parchlinux, android, waydroid, emulator
+date: 2024-07-26T07:45:47.872Z
+tags: 
 editor: markdown
-dateCreated: 2024-07-22T15:57:03.046Z
+dateCreated: 2024-07-25T05:32:13.346Z
 ---
 
-# Waydroid
-Waydroid is a container-based approach to boot a full Android system on a regular GNU/Linux system. 
+# وی‌دروید
+وی‌دروید یک رویکرد مبتنی بر کانتینر برای راه‌اندازی یک سیستم اندروید کامل در یک سیستم گنو/لینوکس است.
 
-## Installation
+## نصب وی‌دروید
+در پارچ لینوکس اسکریپتی به نام `waydroid-helper` وجود دارد که می تواند برای نصب وی‌دروید با یک ایمیج غیر gapps (ایمیج اندروید بدون برنامه های گوگل مانند play store) در Parch Linux استفاده شود.
 
-In Parch Linux there is a script called ```waydroid-helper```^PPR^ which can be used to install waydroid with a non-gapps image (an android image without google apps such as play store ) on Parch Linux.
-
-
-For start you need to install the Script from Parch Packages Repository:
-
+برای شروع باید اسکریپت را از مخزن بسته‌های پارچ نصب کنید:
 ```bash
 sudo pacman -S waydroid-helper
 ```
-
-### Checking system requirements
-
-To check whether if your system is compatible with waydroid, you need to run ```waydroid-checker``` script.
-
+### بررسی سیستم مورد نیاز
+برای بررسی اینکه آیا سیستم شما با وی‌دروید سازگار است یا خیر، باید اسکریپت waydroid-checker را اجرا کنید.
 ```bash
 waydroid-checker
 ```
+پس از اجرای آن با این صفحه مواجه می شوید:
 
-After running it you will be prompted with this screen:
+![](https://wiki.parchlinux.com/waydroid-checker1.png)
 
-![waydroid-checker1.png](/waydroid-checker1.png)
+اکنون بر روی Start Test کلیک کنید.
 
-Click on **Start Test** to begin.
+![](https://wiki.parchlinux.com/waydroid-checker2.png)
 
-![waydroid-checker2.png](/waydroid-checker2.png)
+پس از اتمام تست، اگر CPU شما موفق شد، می توانید به نصب ادامه دهید
 
-After the test is finished, **if your CPU passed you can continue with the installation**
-
-
-### Installing Waydroid
-
-you can run the ```waydroid-installer``` script to begin the installation:
+### نصب وی‌دروید
+برای شروع نصب می توانید اسکریپت `waydroid-installer` را اجرا کنید:
 
 ```bash
 waydroid-installer
 ```
 
-### Post Installation
-
-After the installation is finished you should init waydroid:
+### مراحل بعد از نصب
+پس از اتمام نصب، باید وی‌دروید را راه اندازی کنید:
 
 ```bash
 sudo waydroid init
 ```
-
-after its done, if you are on **wayland** you can run waydroid from your application menu.
-
+پس از اتمام آن، اگر در wayland هستید، می توانید وی‌دروید را از منوی برنامه خود اجرا کنید.
 
 ## X11
-
-For running waydroid under **X11** You need to run ```waydroid-x11``` from terminal:
+برای اجرای وی‌دروید تحت X11، باید `waydroid-x11` را از ترمینال اجرا کنید:
 
 ```bash
 waydroid-x11
 ```
-
-It would launch waydroid in your x11 session like XFCE, Mate etc... under weston.
+این برنامه وی‌دروید را در محیط‌های x11 مانند XFCE، Mate و غیره تحت weston راه اندازی می کند.

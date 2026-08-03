@@ -2,7 +2,7 @@
 title: مشارکت بر روی پروژه پارچ و پروژه‌های وابسته
 description: راهنمای نحوه مشارکت بر روی پارچ
 published: true
-date: 2025-09-17T09:41:38.502Z
+date: 2025-09-17T09:41:47.538Z
 tags: پارچ, مشارکت
 editor: markdown
 dateCreated: 2024-09-28T09:49:13.655Z

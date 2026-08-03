@@ -2,7 +2,7 @@
 title: رفع تحریم‌ها با ابزار های مختلف
 description: مخصوص کاربران ایرانی پارچ
 published: true
-date: 2025-11-13T11:13:16.513Z
+date: 2025-11-13T11:13:21.326Z
 tags: تحریم, پارچ, رفع‌تحریم, dns, ساناد, 403
 editor: markdown
 dateCreated: 2024-07-28T14:17:52.101Z

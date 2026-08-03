@@ -2,7 +2,7 @@
 title: Virtualisierung auf Parch Linux
 description: Die Virtualisierung erstellt eine virtuelle Maschine, die ein Betriebssystem enthält, das in Ihrem Hauptsystem funktioniert.
 published: true
-date: 2025-03-27T13:07:20.259Z
+date: 2025-03-27T13:07:23.333Z
 tags: parch, virtual, virtualization
 editor: markdown
 dateCreated: 2025-03-27T12:44:00.864Z

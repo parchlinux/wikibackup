@@ -1,58 +1,56 @@
 ---
-title: Using your android phone as a webcam
+title: استفاده از دستگاه اندرویدی به عنوان وب‌کم
 description: 
 published: true
-date: 2024-07-29T18:39:45.995Z
-tags: parch, parchlinux, scrcpy, webcam
+date: 2024-07-29T18:44:58.943Z
+tags: پارچ, وب‌کم, اندروید
 editor: markdown
-dateCreated: 2024-07-29T18:39:35.982Z
+dateCreated: 2024-07-29T18:44:09.325Z
 ---
 
-# How to use an android phone as a webcam in Parch Linux?
+# چگونه از تلفن اندرویدی به عنوان وب‌کم در پارچ استفاده کنیم؟
 
 
-## Installing the dependencies
+## نصب پیش‌نیاز ها
 
-first of all you need to install some dependencies:
+اول از همه باید چند پیش‌نیاز را نصب کنید:
 
 ```bash
 sudo pacman -S scrcpy dkms base-devel linux-headers v4l2loopback-dkms
 ```
 
-then you need to load the module:
+سپس باید ماژول را بارگذاری کنید:
 
 ```bash
 sudo modprobe v4l2loopback exclusive_caps=1
 ```
 
-## Usage
+## استفاده
 
-### Camera Sharing
+### به اشتراک گذاری دوربین
 
-For using the front camera, first enable **usb debugging** in your phone, then connect your phone via cable and run this command in terminal:
+برای استفاده از دوربین جلو ابتدا **usb debugging** را در گوشی خود فعال کنید، سپس گوشی خود را از طریق کابل به رایانه وصل کنید و این دستور را در ترمینال اجرا کنید:
 
 ```bash
 scrcpy --video-source=camera --camera-size=1920x1080 --camera-facing=front --v4l2-sink=/dev/video0 --no-playback --no-window
 ```
 
-For the back camera just change ```--camera-facing=front``` to ```--camera-facing=back``` .
+برای دوربین پشتی، کافی است ```--camera-facing=front``` را به ```--camera-facing=back``` تغییر دهید.
 
-#### testing camera
+#### تست دوربین
 
-just open obs, or run this command:
+ obs را باز کنید یا این دستور را اجرا کنید:
 
 ```bash
 ffplay /dev/video0
 ```
 
-### mic sharing
+### به اشتراک گذاری میکروفون
 
-For microphone you can run this command:
+برای میکروفون می توانید این دستور را اجرا کنید:
 
 ```bash
 scrcpy --no-video --audio-source=mic --no-window
 ```
 
-this would share your phone mic as system audio.
-
-
+این دستور میکروفون تلفن شما را به عنوان صدای سیستم به اشتراک می گذارد.

@@ -1,93 +1,94 @@
 ---
-title: Package Management
+title: مدیریت بسته
 description: 
 published: true
-date: 2024-05-05T15:19:05.888Z
+date: 2025-08-30T15:36:03.232Z
 tags: 
 editor: markdown
-dateCreated: 2024-05-05T14:49:35.443Z
+dateCreated: 2024-05-07T16:45:46.483Z
 ---
 
-# Package Management in Parch Linux
-
-## Package Manager
-
-The package manager in Parch Linux is called pacman.
-
-Acording to The ArchLinux wiki:
-
->The pacman package manager is one of the major distinguishing features of Arch Linux. It combines a simple binary package format with an easy-to-use build system. The goal of pacman is to make it possible to easily manage packages, whether they are from the official repositories or the user's own builds.
-Pacman keeps the system up-to-date by synchronizing package lists with the master server. This server/client model also allows the user to download/install packages with a simple command, complete with all required dependencies.
-Pacman is written in the C programming language and uses the bsdtar(1) tar format for packaging.
+# مدیریت بسته در پارچ لینوکس
 
 
-## How does pacman works?
+## ویدئو آموزشی کار با پک‌من و paru
 
-Here is a small cheatsheet that helps you to use pacman:
+شما می‌توانید بجای مطالعه تمام این مطالب ویدئو زیر را برای یادگیری کار با pacman و paru تماشا کنید.
 
-## Basic operations
+<div style="position: relative; padding-top: 56.25%;"><iframe title="آموزش استفاده از pacman و paru در پارچ" width="100%" height="100%" src="https://tubedu.org/videos/embed/jz4hXemh7RFUp6HYgi6egK" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" style="position: absolute; inset: 0px;"></iframe></div>
 
-| Action | Arch | Red Hat/Fedora | Debian/Ubuntu | SLES/openSUSE | Gentoo |
+## مدیر بسته
+
+مدیر بسته در پارچ لینوکس با نام pacman شناخته می‌شود.
+
+طبق ویکی ArchLinux:
+
+> مدیر بسته pacman یکی از ویژگی‌های ممتاز آرچ لینوکس است. این مدیر بسته فرمت ساده‌ای از بسته‌های دودویی را با یک سیستم ساخت آسان ترکیب می‌کند. هدف از pacman، مدیریت آسان بسته‌هااست ،بگونه‌ای که بتوان به راحتی بسته‌ها را مدیریت کرد، و از مخازن رسمی یا غیر رسمی هستند.
+> pacman با هماهنگ کردن فهرست بسته‌ها با سرور اصلی، سیستم را به‌روز نگه می‌دارد. این مدل سرور/کاربر همچنین به کاربر اجازه می‌دهد که بسته‌ها را با یک دستور ساده دانلود/نصب کند، همراه با تمامی وابستگی‌های مورد نیاز.
+> pacman به زبان برنامه‌نویسی C نوشته شده است و از فرمت tar bsdtar(1) برای بسته‌بندی استفاده می‌کند.
+
+## چگونگی کار pacman
+
+اینجا یک کتابچه راهنمای کوچک است که به شما در استفاده از pacman کمک می‌کند:
+
+### عملیات اساسی
+
+| عمل | Arch | Red Hat/Fedora | Debian/Ubuntu | SLES/openSUSE | Gentoo |
 |--------|------|-----------------|----------------|-----------------|--------|
-| Search for package(s) | `pacman -Ss` | `dnf search` | `apt search` | `zypper search` or `zypper se [-s]` | `emerge --search` (`-s`) or `emerge --searchdesc` (`-S`) |
-| Install package(s) by name | `pacman -S` | `dnf install` | `apt install` | `zypper install` or `zypper in` | `emerge` |
-| Get source package(s) and build dependencies | `makepkg -s PKGBUILD` | `dnf builddep` | `apt build-dep` | `zypper source-install` (`zypper si`) or `zypper install -d` | `emerge`, or explicitly `emerge --with-bdeps` |
-| Print targets without performing the operation | `pacman --print` (or `-p`) | `dnf --setopt=tsflags=test` | `apt --simulate` (or `-s`, `--dry-run`, `--just-print`) | `zypper --dry-run` | `emerge --pretend` (`-p`) |
-| Toggle confirmations | `pacman --confirm` or `pacman --noconfirm` | `dnf --assumeyes` (`-y`) or `dnf --assumeno` | `apt --yes` (`-y`) | `zypper --non-interactive` (`-n`) or `zypper --no-confirm` (`-y`) | `emerge --ask` (`-a`) |
-| Refresh local package repository | `pacman -Sy` | `dnf check-update` or `dnf makecache` or `dnf upgrade` | `apt update` | `zypper refresh` or `zypper ref` `[-s]` | `emerge --sync` |
-| Upgrade Packages | `pacman -Syu` | `dnf upgrade` | `apt upgrade` | `zypper update` or `zypper up` | `emerge -[a]uDN @world` |
-| Upgrade Packages (complex updates) | `pacman -Syu` | `dnf distro-sync` | `apt dist-upgrade` | `zypper dup` | `emerge -[a]uDN @world` |
-| Remove a package(s) and dependencies | `pacman -Rs` | `dnf remove` | `apt autoremove` | `zypper remove` or `zypper rm` | `emerge --depclean` (`-c`) |
-| Remove package(s) and configuration files | `pacman -Rn` | ? | `apt purge` | ? | n/a |
-| Remove package(s), dependencies, and config files | `pacman -Rns` | ? | `apt autoremove --purge` | ? | n/a |
-| Remove unneeded dependencies | `pacman -Qdtq | pacman -Rs -` `` (`-Qdttq` for optional deps)| `dnf autoremove` | `apt autoremove` | `zypper rm -u` or `zypper packages --unneeded` | `emerge --depclean` (`-c`) |
-| Remove packages not in repositories | ```pacman -Rs $(pacman -Qmq)```  | `dnf repoquery --extras` | `aptitude purge '~o'` || ? |
-| Mark installed package as explicitly required | `pacman -D --asexplicit` | `dnf mark install` | `apt-mark manual` | `zypper install --force` | `emerge --select` (`-w`) |
-| Install package(s) as dependency | `pacman -S --asdeps` | `dnf install` then `dnf mark remove` | `apt-mark auto` | n/a ([workaround](https://bugzilla.opensuse.org/show_bug.cgi?id=1175678)) | `emerge --oneshot` (`-1`) |
-| Only download package(s) | `pacman -Sw` | `dnf download` | `apt install --download-only` or `apt download` | `zypper --download-only` | `emerge --fetchonly` (`-f`) |
-| Clean up local caches | `pacman -Sc` or `pacman -Scc` | `dnf clean all` | `apt autoclean` or `apt clean` | `zypper clean` | `eclean distfiles` |
-| Start a shell | | `dnf shell` | | `zypper shell` ||
+| جستجو برای بسته(ها) | `pacman -Ss` | `dnf search` | `apt search` | `zypper search` یا `zypper se [-s]` | `emerge --search` (`-s`) یا `emerge --searchdesc` (`-S`) |
+| نصب بسته(ها) با نام | `pacman -S` | `dnf install` | `apt install` | `zypper install` یا `zypper in` | `emerge` |
+| گرفتن بسته‌های منبع و وابستگی‌های ساخت | `makepkg -s PKGBUILD` | `dnf builddep` | `apt build-dep` | `zypper source-install` (`zypper si`) یا `zypper install -d` | `emerge`، یا به صراحت `emerge --with-bdeps` |
+| چاپ اهداف بدون انجام عملیات | `pacman --print` (یا `-p`) | `dnf --setopt=tsflags=test` | `apt --simulate` (یا `-s`، `--dry-run`، `--just-print`) | `zypper --dry-run` | `emerge --pretend` (`-p`) |
+| تغییر تأییدات | `pacman --confirm` یا `pacman --noconfirm` | `dnf --assumeyes` (`-y`) یا `dnf --assumeno` | `apt --yes` (`-y`) | `zypper --non-interactive` (`-n`) یا `zypper --no-confirm` (`-y`) | `emerge --ask` (`-a`) |
+| بازآوری مخزن بسته محلی | `pacman -Sy` | `dnf check-update` یا `dnf makecache` یا `dnf upgrade` | `apt update` | `zypper refresh` یا `zypper ref` `[-s]` | `emerge --sync` |
+| ارتقاء بسته‌ها | `pacman -Syu` | `dnf upgrade` | `apt upgrade` | `zypper update` یا `zypper up` | `emerge -[a]uDN @world` |
+| ارتقاء بسته‌ها (ارتقاء‌های پیچیده) | `pacman -Syu` | `dnf distro-sync` | `apt dist-upgrade` | `zypper dup` | `emerge -[a]uDN @world` |
+| حذف بسته(ها) و وابستگی‌ها | `pacman -Rs` | `dnf remove` | `apt autoremove` | `zypper remove` یا `zypper rm` | `emerge --depclean` (`-c`) |
+| حذف بسته(ها) و فایل‌های پیکربندی | `pacman -Rn` | ? | `apt purge` | ? | n/a |
+| حذف بسته(ها)، وابستگی‌ها و فایل‌های پیکربندی | `pacman -Rns` | ? | `apt autoremove --purge` | ? | n/a |
+| حذف وابستگی‌های نیازمند | `pacman -Qdtq | pacman -Rs -` `` (`-Qdttq` for optional deps)| `dnf autoremove` | `apt autoremove` | `zypper rm -u` یا `zypper packages --unneeded` | `emerge --depclean` (`-c`) |
+| حذف بسته‌هایی که در مخازن نیستند | ```pacman -Rs $(pacman -Qmq)```  | `dnf repoquery --extras` | `aptitude purge '~o'` || ? |
+| نشان دادن بسته نصب شده به صورت صریح | `pacman -D --asexplicit` | `dnf mark install` | `apt-mark manual` | `zypper install --force` | `emerge --select` (`-w`) |
+| نصب بسته(ها) به عنوان وابستگی | `pacman -S --asdeps` | `dnf install` سپس `dnf mark remove` | `apt-mark auto` | n/a ([راه حل](https://bugzilla.opensuse.org/show_bug.cgi?id=1175678)) | `emerge --oneshot` (`-1`) |
+| فقط دانلود بسته(ها) | `pacman -Sw` | `dnf download` | `apt install --download-only` یا `apt download` | `zypper --download-only` | `emerge --fetchonly` (`-f`) |
+| پاکسازی حافظه‌های محلی | `pacman -Sc` یا `pacman -Scc` | `dnf clean all` | `apt autoclean` یا `apt clean` | `zypper clean` | `eclean distfiles` |
+| شروع یک پوسته | | `dnf shell` | | `zypper shell` ||
 
-## Querying specific packages
+### استعلام بسته‌های خاص
 
-| Action | Arch | Red Hat/Fedora | Debian/Ubuntu | SLES/openSUSE | Gentoo |
+| عمل | Arch | Red Hat/Fedora | Debian/Ubuntu | SLES/openSUSE | Gentoo |
 |--------|------|-----------------|----------------|-----------------|--------|
-| Show package information | `pacman -Si` or `pacman -Qi` | `dnf list` or `dnf info` | `apt show` or `apt-cache policy` | `zypper info` or `zypper if` | `emerge -S`, `emerge -pv` or `eix` |
-| Display local package info | `pacman -Qi` | `rpm -qi` / `dnf info installed` | `dpkg -s` or `aptitude show` | `zypper --no-remote info` or `rpm -qi` | `emerge -pv` or `emerge -S` |
-| Display remote package info | `pacman -Si` | `dnf info` | `apt-cache show` or `aptitude show` | `zypper info` | `emerge -pv` and `emerge -S` or `equery meta` |
-| Display local package files | `pacman -Ql` | `rpm -ql` | `dpkg -L` | `rpm -ql` | `equery files` or `qlist` |
-| Display remote package files | `pacman -Fl` | `dnf repoquery -l` or `repoquery -l` | `apt-file list` || `pfl` |
-| Query package providing file | `pacman -Qo` | `rpm -qf` (installed) or `dnf provides` (everything) or `repoquery -f` | `dpkg -S` or `dlocate` | `rpm -qf` (installed) or `zypper search -f` (everything) | `equery belongs` or `qfile` |
-| List files in package | `pacman -Ql` or `pacman -Fl` | `dnf repoquery -l` | `dpkg-query -L` | `rpm -ql` | `equery files` or `qlist` |
-| Show reverse provides | `pacman -F` | `dnf provides` | `apt-file search` | `zypper what-provides` or `zypper wp` (exact)
+| نمایش اطلاعات بسته | `pacman -Si` یا `pacman -Qi` | `dnf list` یا `dnf info` | `apt show` یا `apt-cache policy` | `zypper info` یا `zypper if` | `emerge -S`، `emerge -pv` یا `eix` |
+| نمایش اطلاعات بسته محلی | `pacman -Qi` | `rpm -qi` / `dnf info installed` | `dpkg -s` یا `aptitude show` | `zypper --no-remote info` یا `rpm -qi` | `emerge -pv` یا `emerge -S` |
+| نمایش اطلاعات بسته از راه دور | `pacman -Si` | `dnf info` | `apt-cache show` یا `aptitude show` | `zypper info` | `emerge -pv` و `emerge -S` یا `equery meta` |
+| نمایش فایل‌های بسته محلی | `pacman -Ql` | `rpm -ql` | `dpkg -L` | `rpm -ql` | `equery files` یا `qlist` |
+| نمایش فایل‌های بسته از راه دور | `pacman -Fl` | `dnf repoquery -l` یا `repoquery -l` | `apt-file list` || `pfl` |
+| استعلام بسته‌ای که فایل را فراهم می‌کند | `pacman -Qo` | `rpm -qf` (نصب شده) یا `dnf provides` (همه) یا `repoquery -f` | `dpkg -S` یا `dlocate` | `rpm -qf` (نصب شده) یا `zypper search -f` (همه) | `equery belongs` یا `qfile` |
+| لیست فایل‌ها در بسته | `pacman -Ql` یا `pacman -Fl` | `dnf repoquery -l` | `dpkg-query -L` | `rpm -ql` | `equery files` یا `qlist` |
+| نمایش فراهم کننده‌های معکوس | `pacman -F` | `dnf provides` | `apt-file search` | `zypper what-provides` یا `zypper wp` (دقیق)
 
- or `zypper se --provides` (fuzzy) | `equery belongs` (installed) or `pfl` |
-| Search package by file | `pacman -F` | `dnf provides` | `apt-file search` or `auto-apt` | `zypper search -f` | `equery belongs` or `qfile` |
-| Show package changelog | `pacman -Qc` | `dnf changelog` | `apt-get changelog` | `rpm -q --changelog` | `equery changes -f` |
+ یا `zypper se --provides` (مبهم) | `equery belongs` (نصب شده) یا `pfl` |
+| جستجو بسته با فایل | `pacman -F` | `dnf provides` | `apt-file search` یا `auto-apt` | `zypper search -f` | `equery belongs` یا `qfile` |
+| نمایش تغییرات بسته | `pacman -Qc` | `dnf changelog` | `apt-get changelog` | `rpm -q --changelog` | `equery changes -f` |
 
+### AUR
 
+> مخزن کاربران Arch (AUR) یک مخزن برای کاربران Arch است که توسط جامعه پشتیبانی می‌شود. این مخزن شامل توضیحات بسته‌ها (PKGBUILDs) است که به شما اجازه می‌دهد یک بسته را از منبع با makepkg کامپایل کرده و سپس آن را از طریق pacman نصب کنید. AUR برای سازماندهی و به اشتراک گذاری بسته‌های جدید از جامعه ایجاد شده است و برای کمک به اضافه کردن بسته‌های محبوب به مخزن اضافی، بروز شدن پکیج‌های معروف را تسریع می‌کند.
+تعداد زیادی از بسته‌های جدیدی که وارد مخازن رسمی می‌شوند ابتدا در AUR شروع می‌شوند. در AUR، کاربران قادر به ارسال ساخت‌های بسته خود (PKGBUILD و فایل‌های مرتبط) هستند. جامعه AUR قادر به رای‌گیری برای بسته‌ها در AUR است. اگر یک بسته به اندازه کافی محبوب شود - تهیه شده با مجوز سازگار و تکنیک بسته‌بندی خوب - ممکن است به مخزن اضافی وارد شود (که مستقیماً توسط pacman یا از طریق سیستم ساخت Arch قابل دسترس است).
 
-## AUR
+### مدیر AUR
 
-> The Arch User Repository (AUR) is a community-driven repository for Arch users. It contains package descriptions (PKGBUILDs) that allow you to compile a package from source with makepkg and then install it via pacman. The AUR was created to organize and share new packages from the community and to help expedite popular packages' inclusion into the extra repository.
-A good number of new packages that enter the official repositories start in the AUR. In the AUR, users are able to contribute their own package builds (PKGBUILD and related files). The AUR community has the ability to vote for packages in the AUR. If a package becomes popular enough — provided it has a compatible license and good packaging technique — it may be entered into the extra repository (directly accessible by pacman or from the Arch build system). 
+پارچ لینوکس، paru را به عنوان مدیر AUR دارد.
+استفاده از paru مانند استفاده از pacman است، با همان نحوه‌ی نوشتاری می‌توانید به‌راحتی بسته‌ها را از AUR نصب کنید.
+در هنگام استفاده از paru، نیازی به اجرای آن با sudo نیست، زیرا در صورت نیاز، خود ابزار دسترسی ریشه را درخواست می‌کند.
+#### استفاده از Paru
+در زیر چند دستور paru مفید آمده است:
 
-
-### AUR Manager
-
-Parch Linux has Paru as is AUR Manager.
-using Paru is just like using pacman, with the same syntax you can easly install packages from AUR.
-
-
-#### Using Paru
-Here are some useful paru commands:
-
-| Command | Description |
+| دستور | توضیحات |
 | --- | --- |
-| `paru` | Update the entire system |
-| `paru -Syu` | Update the entire system |
-| `paru -S appname` | Install the program from AUR |
-| `paru appname` | Install the program from AUR, choosing from the list |
-| `paru -Sc` | Remove Pacman and Paru caches |
-| `paru -Ss appname` | Search for a package |
-
+| `paru` | بروزرسانی کامل سیستم |
+| `paru -Syu` | بروزرسانی کامل سیستم |
+| `paru -S نام‌برنامه` | نصب برنامه از AUR |
+| `paru نام‌برنامه` | نصب برنامه از AUR، با انتخاب از لیست |
+| `paru -Sc` | پاک کردن حافظه‌های پنهان Pacman و Paru |
+| `paru -Ss نام‌برنامه` | جستجو برای یک بسته |

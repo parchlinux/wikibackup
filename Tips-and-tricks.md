@@ -2,7 +2,7 @@
 title: نکات و ترفندها
 description: 
 published: true
-date: 2025-11-13T23:39:07.544Z
+date: 2025-11-13T23:39:10.714Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-05T08:06:21.916Z

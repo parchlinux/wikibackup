@@ -2,7 +2,7 @@
 title: Home
 description: Welcome to Parch Linux wiki!
 published: true
-date: 2025-12-01T04:49:03.699Z
+date: 2025-12-01T04:49:08.092Z
 tags: home, welcome
 editor: markdown
 dateCreated: 2024-04-05T10:17:16.712Z

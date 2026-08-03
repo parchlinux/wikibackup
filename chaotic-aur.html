@@ -1,0 +1,28 @@
+<!--
+title: استفاده از مخزن Chaotic AUR
+description: استفاده از مخزن باینری های بیلد شده در مخزن AUR
+published: true
+date: 2026-07-03T13:37:12.222Z
+tags: pacman
+editor: ckeditor
+dateCreated: 2026-05-25T08:09:43.628Z
+-->
+
+<p>برای استفاده از مخزن <strong>Chaotic AUR</strong> در پارچ لینوکس کافیست مخزن فعال برای Chaotic AUR داشته باشید.</p>
+<p>&nbsp;</p>
+<ul>
+  <li>در این آموزش ما از مخزن Whitelist شدهٔ freedif استفاده می‌کنیم تا در شرایط محدودیت های اینترنتی به مشکل بر نخوریم.<br><br>ابتدا فایل <code>/etc/pacman.conf</code> رو به کمک یک ادیتور (مثل <code>vim</code>، <code>nano</code> یا <code>micro</code>) باز می‌کنیم؛ سپس دو خط زیر را در انتهای فایل وارد می‌کنیم.</li>
+  <li>&nbsp;</li>
+</ul>
+<pre><code class="language-plaintext">[chaotic-aur]
+Server = https://mirror.freedif.org/chaotic-aur/$repo/$arch</code></pre>
+<p>و فایل را ذخیره می‌کنیم و خارج می‌شویم.</p>
+<p>&nbsp;</p>
+<p>سپس با استفاده از دستور</p>
+<pre><code class="language-plaintext">sudo pacman -Syu</code></pre>
+<p>مخازن را به‌روزرسانی و سامانه را به‌روز می‌کنیم.</p>
+<p>&nbsp;</p>
+<p>برای یافتن بسته‌های موجود، می‌توانید از دستور</p>
+<p>&nbsp;</p>
+<pre><code class="language-plaintext">sudo pacman -Ss package_name</code></pre>
+<p>استفاده کنید.</p>

@@ -2,7 +2,7 @@
 title: Waydroid auf Parch Linux
 description: Wie führe ich Android-Apps in Parch aus?
 published: true
-date: 2025-03-28T12:45:02.126Z
+date: 2025-03-28T12:45:11.389Z
 tags: parchlinux, android, waydroid, emulator
 editor: markdown
 dateCreated: 2025-03-28T12:45:02.126Z
