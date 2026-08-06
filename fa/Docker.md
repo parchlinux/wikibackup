@@ -107,23 +107,35 @@ docker run --name some-nginx -p 8080:80 -v /some/content:/usr/share/nginx/html:r
 2- استفاده از mirror های دیگر
 3- استفاده از ابزار های proxy client همانند [hiddify](https://hiddify.com/) و [nekoray](https://github.com/MatsuriDayo/nekoray) ...
 
+
 ## استفاده از mirror های دیگر
 
-ساده ترین روش برای دور زدن تحریم ها می باشد با استفاده از مخازن دیگر اقدام به دانلود image ها می کنید (همانند focker.ir و ابراروان)
+ساده ترین روش برای دور زدن تحریم‌ها، استفاده از مخازن دیگر برای دانلود image ها است (همانند ایران‌سرور، focker.ir و ابراروان).
 
-ابراروان یک [مستند](https://www.arvancloud.ir/fa/dev/docker) جامع در این باز منتشر کرده است
-
-اما به طور خلاصه میتوانید تنها با اضافه کردن ادرس دامین /docker.arvancloud.ir به اول اسم image از مخازن ابراروان برای دانلود image استفاده کنید:
-
-```
- docker pull docker.arvancloud.ir/<ImageName> 
+### 1. ایران‌سرور
+می توانید از طریق مستند ایران سرور اقدام به تغییر به صورت کامل برای دریافت راحت این کار انجام بدهید و یا به‌طور خلاصه می‌توانید با افزودن آدرس دامنه https://mirror.iranserver.com/docker/ به ابتدای نام image، از مخازن ایران‌سرور برای دانلود image استفاده کنید:
+```bash
+docker pull mirror.iranserver.com/docker/<ImageName>
 ```
 
-همچنین برای /focker.ir نیز به همین صورت است:
+این آدرس به شما این امکان را می‌دهد که از طریق سرورهای ایران‌سرور، image مورد نظر خود را با سرعت و بدون تحریم دریافت کنید.
 
+### 2. ابراروان
+ابراروان یک [مستند](https://www.arvancloud.ir/fa/dev/docker) جامع در این باز منتشر کرده است. اما به طور خلاصه می‌توانید تنها با اضافه کردن آدرس دامنه `/docker.arvancloud.ir` به اول اسم image از مخازن ابراروان برای دانلود image استفاده کنید:
+
+```bash
+docker pull docker.arvancloud.ir/<ImageName>
 ```
- docker pull focker.ir/<ImageName> 
+
+### 3. focker.ir
+برای استفاده از focker.ir نیز به همین صورت است:
+
+```bash
+docker pull focker.ir/<ImageName>
 ```
+
+
+
 
 ## استفاده از dns 
 
