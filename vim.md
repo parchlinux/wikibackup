@@ -2,7 +2,7 @@
 title: vim
 description: معرفی و آموزش کوتاه ویرایشگر ویم (Vim)
 published: true
-date: 2026-08-24T16:22:14.082Z
+date: 2026-08-24T16:22:40.184Z
 tags: vim, ویم, vimscript
 editor: markdown
 dateCreated: 2025-02-18T17:27:58.851Z
