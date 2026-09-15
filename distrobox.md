@@ -1,133 +1,65 @@
 ---
-title: Distrobox
+title: دیستروباکس
 description: 
 published: true
-date: 2024-07-26T09:55:03.789Z
-tags: distrobox, podman, docker
+date: 2026-09-15T15:27:08.202Z
+tags: داکر, distrobox, podman, docker
 editor: markdown
-dateCreated: 2024-07-26T09:52:59.311Z
+dateCreated: 2026-09-15T15:27:08.201Z
 ---
 
-# Distrobox	
-> Distrobox is a container wrapping layer that allows the user to install containerised versions of Linux that are different to the host while providing tight integration with the host allowing the use of binaries designed for one distribution to run on another. 
+# دیستروباکس
 
-Distrobox itself is not a container manager and relies on Podman or [Docker](https://wiki.parchlinux.com/en/docker) to create containers
-
-From the Distrobox documentation:
-
-> Use any Linux distribution inside your terminal. Enable both backward and forward compatibility with software and freedom to use whatever distribution you’re more comfortable with. Distrobox uses Podman or Docker to create containers using the Linux distribution of your choice. The created container will be tightly integrated with the host, allowing sharing of the HOME directory of the user, external storage, external USB devices and graphical apps (X11/Wayland), and audio.
-
-## Security implications
-
-The main goal of Distrobox is not focused on sandboxing the containers from the host and the containers that are running inside distrobox would have full access to your home folder as well as some other locations.
-
-It is recommended to use **Podman** instead of **Docker** since by default docker would run containers as root and rootful containers **will have unrestricted access to your host filesystem**
+> دیسترو‌باکس (Distrobox) یک لایه‌ی پوششی روی کانتینرها است (Container wrapping layer) که به کاربر اجازه می‌دهد نسخه‌های کانتینری‌شده‌ای از توزیع‌های مختلف لینوکس را درون سیستم‌عامل میزبان (Host) نصب و اجرا کند. دیسترو‌باکس با ایجاد یک تلفیق و یکپارچگی عمیق با سیستم میزبان، امکان اجرای برنامه‌های ساخته‌شده برای یک توزیع را روی توزیع دیگر فراهم می‌سازد.
+> 
 
 
-## Installation
+خود دیسترو‌باکس یک مدیریت‌کننده‌ی کانتینر (Container Manager) نیست و برای ساخت و مدیریت کانتینرها به Podman یا Docker متکی است.
 
-### With root access
+طبق مستندات رسمی دیستروباکس:
+> «هر توزیع لینوکسی را مستقیماً درون ترمینال خود استفاده کنید. با این ابزار، سازگاری رو به عقب و رو به جلو (Backward/Forward Compatibility) برای نرم‌افزارها و همچنین آزادی عمل در استفاده از هر توزیعی که با آن راحت‌تر هستید فراهم می‌شود. دیسترو‌باکس از Podman یا Docker برای ساخت کانتینر بر پایه توزیع دلخواه شما استفاده می‌کند.
+> کانتینر ساخته‌شده به‌طور کامل با سیستم میزبان یکپارچه می‌شود؛ این یکپارچگی شامل اشتراک‌گذاری پوشه $HOME کاربر، حافظه‌های خارجی، دستگاه‌های USB، برنامه‌های گرافیکی (X11/Wayland) و سیستم خروجی صدا است.»
+{.is-info}
 
-first you need install either podman or docker to begin.
+## ملاحظات امنیتی 
 
-then install ```distrobox``` or ```distrobox-git``` from aur using paru.
+هدف اصلی دیسترو‌باکس ایزوله‌سازی و ایزوله نگه‌داشتن (Sandboxing) کانتینرها از سیستم میزبان نیست. کانتینرهایی که درون دیسترو‌باکس اجرا می‌شوند دسترسی کامل به پوشه‌ی خانگی (HOME) و برخی از بخش‌های دیگر سیستم شما دارند.
+
+> توصیه می‌شود به جای Docker از Podman استفاده کنید؛ زیرا داکر به‌صورت پیش‌فرض کانتینرها را با دسترسی Root اجرا می‌کند و کانتینرهای Rootful دسترسی بدون محدودیت به فایل‌سیستم میزبان خواهند داشت.
+{.is-info}
 
 
-### Without root access
+## روش‌های نصب (Installation)
+### با دسترسی Root
 
-It is possible to install Distrobox into your home folder if you don't have root access to the system or if you are using an immutable distro. Doing so requires the use of a curl-to-sh pipe which is an unsupported installation method due to it posing a security risk.
+ابتدا باید یکی از ابزارهای podman یا docker را روی سیستم خود نصب کنید.
 
-You can find instructions on the [Distrobox documentation page](https://distrobox.privatedns.org/#curl-or-wget)
-
-## Usage
-> Note:
-> - Throughout the following section ‍‍‍```name``` is a variable and can be whatever you want. In all cases replace ```name``` with the actual name you choose
-> - For the full list of supported options in any sub category use ```--help```, for example to see all creation options use ```distrobox create --help```
-> - A full list of supported distros along with their image names can be found at https://distrobox.it/compatibility/#containers-distros
-> - For more advanced usage techniques please see the Distrobox Documentation page at https://distrobox.it/usage/usage/
-
-To create a new container run the following: 
+نصب docker :
 ```bash
-distrobox create -n name
+sudo pacman -S docker
 ```
 
-To List installed containers:
+نصب podman : 
 ```bash
-distrobox list
+sudo pacman -S podman
 ```
 
-To intract with an installed container:
+سپس بسته `distrobox` یا `distrobox-git` را از AUR (مثلاً با استفاده از دستیار paru) نصب نمایید.
 ```bash
-distrobox enter name
+sudo pacman -S distrobox
 ```
-or you can run a command directly:
-```bash
-distrobox enter name -- command
-```
-To stop a running container run the following:
+### بدون دسترسی Root
 
-```
-distrobox stop name
-```
-To delete a container run the following:
+> اگر دسترسی Root به سیستم ندارید یا از یک توزیع غیرقابل‌تغییر (Immutable) استفاده می‌کنید، امکان نصب Distrobox درون پوشه‌ی خانگی (HOME) وجود دارد. این روش نیازمند اجرا از طریق اسکریپت آنلاین (curl-to-sh) است که به دلیل مخاطرات امنیتی، یک روش نصب رسمی و پشتیبانی‌شده محسوب نمی‌شود.
+{.is-warning}
 
-```
-distrobox rm name
-```
-To install a specific distro into a container run the following (in this example its Ubuntu):
+دستورالعمل‌های این روش را می‌توانید در صفحه مستندات رسمی Distrobox پیدا کنید.
+### نحوه استفاده (Usage)
 
-```
-distrobox create --image ubuntu:22.04
-```
-Installations can be fully customised as follows (in this example its a container called test running Gentoo with root access):
+ نکته: در تمام دستورات زیر، عبارت name یک متغیر است و می‌توانید نام دلخواه خود را جایگزین آن کنید.
 
-```
-distrobox create -i docker.io/gentoo/stage3:latest -n test --root
-```
+ برای مشاهده لیست کامل گزینه‌های هر دستور از پرچم help-- استفاده کنید (مثلاً distrobox create --help).
 
-If you need your container to have root access to the host then it is recommended that you use the ‍‍‍```--root``` flag over ```sudo distrobox```
+   لیست کامل توزیع‌های پشتیبانی‌شده به همراه نام ایمیج آن‌ها در سایت رسمی Distrobox موجود است.
 
-
-## Configuration
-It is possible to configure Distrobox in two ways, either with a configuration file or by using environment variables. 
-
-### Configuration files
-
-Distrobox checks the following locations for config files, from least important to most important:
-
-    /usr/share/distrobox/distrobox.conf
-    /usr/etc/distrobox/distrobox.conf
-    /etc/distrobox/distrobox.conf
-    ~/.config/distrobox/distrobox.conf
-    ~/.distroboxrc
-
-An example config file is as follows: 
-
-```
-container_always_pull="1"
-container_generate_entry=0
-container_manager="docker"
-container_image_default="registry.opensuse.org/opensuse/toolbox:latest"
-container_name_default="test-name-1"
-container_user_custom_home="$HOME/.local/share/container-home-test"
-container_init_hook="~/.local/distrobox/a_custom_default_init_hook.sh"
-container_pre_init_hook="~/a_custom_default_pre_init_hook.sh"
-non_interactive="1"
-skip_workdir="0"
-```
-
-### Environment variables
-
-The following variables are available and should be set using per user variables:
-
-```
-DBX_CONTAINER_ALWAYS_PULL
-DBX_CONTAINER_CUSTOM_HOME
-DBX_CONTAINER_IMAGE
-DBX_CONTAINER_MANAGER
-DBX_CONTAINER_NAME
-DBX_CONTAINER_ENTRY
-DBX_NON_INTERACTIVE
-DBX_SKIP_WORKDIR
-```
-
+        برای کاربردهای پیشرفته‌تر به صفحه مستندات کاربری مراجعه کنید.
