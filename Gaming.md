@@ -1,163 +1,202 @@
 ---
-title: Gaming on Parch Linux
-description: A simple Guide about Gaming on Parch Linux
+title: بازی کردن در پارچ لینوکس
+description: راهنمای ساده درباره تجربه بازی ها در پارچ لینوکس
 published: true
-date: 2025-03-30T17:49:15.946Z
-tags: game, parchlinux, gaming, linux
+date: 2025-03-31T12:34:34.794Z
+tags: 
 editor: markdown
-dateCreated: 2024-05-16T17:56:46.186Z
+dateCreated: 2024-10-23T12:54:37.951Z
 ---
 
-# Gaming on ParchLinux
 
-Acording to Archlinux wiki:
+# بازی کردن در پارچ لینوکس
 
-> Linux has long been considered an "unofficial" gaming platform; the support and target audience provided to it is not a primary priority for most gaming organizations. Changes to this situation have accelerated, starting from 2021 onward, as big players like Valve, the CodeWeavers group and the community have made tremendous improvements to the ecosystem, allowing Linux to truly become a viable platform for gaming. Further, more and more indie development teams strive to use cross-platform rendering engines in order to have their game able to compile and run on Linux.
-When it comes to gaming, the majority of user's thoughts are often directed towards popular AAA games which are usually written exclusively for the Microsoft Windows platform. This is understandable, however, it is not the only and sole availability. Please refer to #Game environments and #Getting games further down the page where you can find software to run games from other platforms.
-If you however are fixated on getting games written for Microsoft Windows to work on Linux, then a different mindset, tools and approach is required; understanding internals and providing functional substitution. 
+مطابق ویکی آرچ لینوکس:
 
+> لینوکس مدّت‌هاست به‌لطف مفسرهای API ویندوزی ازجمله پروتون، به‌صورت غیرمستقیم برای کاربری گیمینگ استفاده می‌شود. باوجود این‌که لینوکس و کاربران آن برای غالب شرکت‌های بازی‌ساز اولویت به‌شمار نمی‌آیند، از سال ۲۰۲۱ به‌بعد مقبولیت گنو/لینوکس به‌عنوان یک پلتفرم بازی روز‌به‌روز درحال‌افزایش است. به‌گونه‌ای که شرکت Valve، گروه codewars و جامعه‌ی کاربران لینوکس با مشارکت‌های خود پیشرفت‌های درخورتوجهی در مسیر به‌رسمیت‌شناختن لینوکس رقم زده‌اند.
+>
+> اغلب زمانی که صحبت از بازی می‌شود، ذهن بیش‌تر کاربرها به‌سمت بازی‌های پرطرفدار AAA سوق پیدا می‌کند که تعداد زیادی از آن‌ها صرفاً برای پلتفرم ویندوز (در دسکتاپ) دسترس‌اند؛ شاید در نگاه اوّل تجربه‌ی این عناوین برای گنو/لینوکس ناممکن به‌نظر برسد، امّا در زمان کنونی اجرای بازی‌های ویندوز در گنو/لینوکس ناشدنی نیست. درست مانند چیزی که در آغاز به‌آن اشاره شد، پروتون (انشعابی از واین) به‌عنوان لایه‌ی سازگاری باتمرکز بر تجربهٔ بازی‌های ویندوز توسط ولو توسعه و به‌صورت عمومی انتشار یافته است. برای نصب و استفاده از پروتون و دیگر ابزارها در گنو/لینوکس به بخش‌های #game environment و #getting games در پایین صفحه مراجعه کنید.
+>
+> لازم به‌تذکر است که اگر قصد اجرای بازی‌های ویندوزی را در گنو/لینوکس دارید، باید از رویکردها، ابزارها و طرز فکر متفاوتی استفاده کنید؛ درک عمیق‌تر از ساختار داخلی سیستم‌عامل‌ها و ابزارها، پیش‌نیاز انجام این مراحل هستند.
 
-# Drivers
+# راه‌اندازها (Drivers)
 
-For better experience in Gaming you need to install some drivers on Parch Linux
+برای بهبود کیفیت تجربهٔ بازی در پارچ لینوکس نیازمند نصب برخی راه‌اندازها (Drivers) هستید.
 
 ## [Intel graphics](https://wiki.archlinux.org/title/Intel_graphics)
 
-For Gen 3 hardware and later intel GPU install ```mesa```^extra^ ```lib32-mesa``` ^multilib^ and for Gen 2 to Gen 11 hardware install ```mesa-amber```^extra^ ```lib32-mesa-amber```^multilib^ .
+برای سخت‌افزارهای نسل 3 و به بعد (نسل‌هایی که از intel GPU استفاده می‌کنند) بسته‌های `mesa`extra و `lib32-mesa` multilib را نصب کنید. همچنین برای سخت‌افزارهای نسل دو الی یازده بسته‌های `mesa-amber`extra  و `lib32-mesa-amber`multilib را نصب کنید.
 
-The ```xf86-video-intel```^extra^ package provides the legacy intel DDX driver from Gen 2 to Gen 9 hardware. This package is generally not recommended.
+بستهٔ  `xf86-video-intel`extra راه‌اندازِ (Driver) قدیمی DDX اینتل را برای سخت‌افزارهای نسل 2 تا 9 را به‌کار می‌گیرد. _این بسته به‌صورت کلی توصیه نمی‌شود._
 
 ## [vulkan](https://wiki.archlinux.org/title/Vulkan)
 
-Here are the instructions for installing Vulkan drivers on Intel and AMD graphics cards:
+در این بخش دستورالعمل‌هایی برای نصب درایورهای Vulkan برای کارت‌گرافیک‌های اینتل و AMD آورده شده:
 
-### **For Intel GPUs:**
+### برای کارت‌گرافیک‌های اینتل
 
-For Vulkan support (Haswell and newer; support for earlier chips is incomplete or missing), install the ```vulkan-intel```^extra^ package.
-For 32-bit Vulkan support, install the ```lib32-vulkan-intel```^multilib^ package.
+برای استفاده از Vulkan (Haswell و نسل‌های جدیدتر؛ پشتیبانی برای تراشه‌های قدیمی‌تر ناقص بوده یا وجود ندارد)، بستهٔ `vulkan-intel`extra را نصب کنید. همچنین برای پشتیبانی در سیستم‌های ۳۲بیتی می‌بایست بستهٔ `lib32-vulkan-intel`multilib را نصب کرد.
 
-### **For Nvidia GPUs:**
-For NVIDIA GPUs, there are two implementations available:
+### برای کارت‌گرافیک‌های انویدیا
 
-##### Proprietary Driver
-- `nvidia-utils`^extra^ (or `lib32-nvidia-utils`^multilib^ for 32-bit support) 
-- This is the proprietary driver provided by NVIDIA, which includes an OpenGL implementation.
+برای کارت‌گرافیک‌های انویدیا، دو پیاده‌سازی دردسترس وجود دارد:
 
-##### Open-Source Driver
-- `vulkan-nouveau`^extra^ (or `lib32-vulkan-nouveau`^multilib^ for 32-bit support) 
-- This is the open-source NVK driver, which is part of the Mesa project. It provides a Vulkan implementation for NVIDIA GPUs.
+#### درایورهای اختصاصی
+
+  * `nvidia-utils`extra (یا `lib32-nvidia-utils`multilib برای پشتیبانی سیستم‌های ۳۲بیتی)
+  * این راه‌انداز اختصاصی (proprietary driver) توسط انویدیا ارائه شده که شامل پیاده‌سازی OpenGL نیز می‌باشد.
 
 
-### **For AMD GPUs:**
-AMD offers two Vulkan driver options:
 
-1. **vulkan-radeon**
-    RADV (part of Mesa project)
-    
-Install ‍‍‍```vulkan-radeon```^extra^ package.
+#### درایورهای متن-باز
+
+  * `vulkan-nouveau`extra (یا `lib32-vulkan-nouveau`multilib برای سیستم های 32بیتی)
+  * این راه‌انداز متن‌باز NVK است که بخشی از پروژه Mesa می‌باشد و امکان پیاده‌سازی Vulkan برای کارت‌گرافیک‌های انویدیا را فراهم می‌کند.
 
 
-2. **amdvlk**
-   AMDVLK Open (maintained by AMD)
-   
-Install ```amdvlk```^extra^
 
-Additionally, for 32-bit application support, you can install the corresponding `lib32` packages:
+### برای کارت‌گرافیک‌های AMD
 
-- For `vulkan-radeon`: `lib32-vulkan-radeon`^multilib^
-- For `amdvlk`: `lib32-amdvlk`^multilib^
+Vulkan دو گزینه برای راه‌انداز AMD ارائه می‌دهد:
 
-After installing the appropriate Vulkan driver, your system should be able to run Vulkan-based applications and games seamlessly.
+  1. **vulkan-radeon**
+
+
+
+RADV (بخشی از پروژه Mesa)
+
+از طریق نصب بستهٔ `vulkan-radeon`extra قابل‌دسترسی است.
+
+  1. **amdvlk**
+
+
+
+AMDVLK Open (توسط AMD نگهداری میشود)
+
+از طریق نصب بستهٔ `amdvlk`extra قابل‌دسترسی است.
+
+علاوه‌بر این‌ها، برای پشتیبانی از برنامه‌های ۳۲بیتی، می‌توانید بسته‌های مربوط‌به lib32 را نصب کنید:
+
+  * `lib32-vulkan-radeon`multilib برای **vulkan-radeon**
+  * `lib32-amdvlk`multilib برای **amdvlk**
+
+
+
+> توجه: پردازشگرهای گرافیکی  GFX10 (سری Vega و Polaris) دیگر توسط راه‌انداز ولکان AMDVLK پشتیبانی نمی‌شوند. اگرچه به‌کمک Paru در پارچ می‌توان آخرین نسخه سازگار آن را ([amdvlk-2023q3.3](https://aur.archlinux.org/packages/amdvlk-2023q3.3)AUR) از AUR نصب کرد.
+
+پس‌از نصب راه‌انداز Vulkan مناسب، سیستم شما باید بتواند برنامه‌ها و بازی‌های مبتنی‌بر Vulkan را بدون مشکل اجرا کند.
 
 > ## [AMDGPU](https://wiki.archlinux.org/title/AMDGPU)
 
 > ## [Nvidia](https://wiki.archlinux.org/title/NVIDIA)
 
 ## [Mesa](https://mesa3d.org/)
-Mesa is an open-source OpenGL implementation, continually updated to support the latest OpenGL specification. It has a collection of open-source drivers for Intel graphics, AMD (formerly ATI), and NVIDIA GPUs. Mesa also provides software rasterizers, such as llvmpipe.
 
-There are two Mesa packages, each with a distinct set of drivers:
+Mesa یک پیاده‌سازی متن‌‌باز از OpenGL است که از جدیدترین ویژگی‌های اضافه‌شده‌به OpenGL پشتیبانی می‌کند. این پروژه مجموعه‌ای از راه‌انداز متن‌‌باز را برای کارت‌‌گرافیک‌های اینتل، AMD و انویدیا ارائه می‌دهد. همچنین، Mesa شامل رم‌افزاری مانند llvmpipe نیز می‌شود.
+
+دو بستهٔ Mesa وجود دارد که هریک مجموعه‌ای مجزا از درایورها را ارائه می‌دهند:
+
+###  mesa
+
+`mesa` یک بستهٔ به‌روز از Mesa که شامل اکثر راه‌اندازهای نوین برای سخت‌افزارهای جدیدتر می‌باشد:
+
+  * `r300`: برای کارت‌گرافیک‌های Radeon R300، R400 و R500 شرکت AMD.
+  * `r600`: برای کارت‌‌گرافیک‌های Radeon R600 تا Northern Islands شرکت AMD. به‌صورت رسمی توسط AMD پشتیبانی می‌شود.
+  * `radeonsi`: برای کارت‌‌گرافیک‌های Southern Island و نسل‌های جدیدتر AMD. به‌صورت رسمی توسط AMD پشتیبانی می‌شود.
+  * `nouveau`: راه‌انداز متن‌باز برای کارت‌گرافیک‌های انویدیا.
+  * `virtio_gpu`: راه‌انداز GPU مجازی برای virtio که در ماشین‌مجازی‌های مبتنی‌بر QEMU (مثل KVM یا Xen) به‌کار گرفته می‌شود.
+  * `vmwgfx`: برای GPU های مجازی VMware.
+  * `i915`: برای سخت‌افزارهای نسل ۳ اینتل.
+  * `crocus`: برای سخت‌افزارهای نسل ۴ الی ۷ اینتل.
+  * `iris`: برای سخت‌افزارهای نسل ۸ به‌بعد اینتل. به‌صورت رسمی توسط اینتل پشتیبانی می‌شود.
+  * `zink`: یک درایور Gallium که OpenGL را بر روی Vulkan اجرا می‌کند.
+  * `d3d12`: برای پشتیبانی از OpenGL-3.3 در سامانه‌هایی که تنها از D3D12 پشتیبانی می‌کنند (مانند WSL).
+  * `softpipe`: یک rasterizer نرم‌افزاری و راه‌انداز مرجع Gallium.
+  * `llvmpipe`: یک rasterizer نرم‌افزاری که از LLVM برای تولید کد JIT برای x86 استفاده می‌کند و چندرشته‌ای (Multi-Thread) است.
 
 
-### mesa
-`mesa` is the up-to-date Mesa package which includes most of the modern drivers for newer hardware:
-
-- `r300`: for AMD's Radeon R300, R400, and R500 GPUs.
-- `r600`: for AMD's Radeon R600 GPUs up to Northern Islands. Officially supported by AMD.
-- `radeonsi`: for AMD's Southern Island GPUs and later. Officially supported by AMD.
-- `nouveau`: Nouveau is the open-source driver for NVIDIA GPUs.
-- `virtio_gpu`: a virtual GPU driver for virtio, can be used with QEMU-based VMMs (like KVM or Xen).
-- `vmwgfx`: for VMware virtual GPUs.
-- `i915`: for Intel's Gen 3 hardware.
-- `crocus`: for Intel's Gen 4 to Gen 7 hardware.
-- `iris`: for Intel's Gen 8 hardware and later. Officially supported by Intel.
-- `zink`: a Gallium driver used to run OpenGL on top of Vulkan.
-- `d3d12`: for OpenGL 3.3 support on devices that only support D3D12 (i.e., WSL).
-- `softpipe`: a software rasterizer and a reference Gallium driver.
-- `llvmpipe`: a software rasterizer which uses LLVM for x86 JIT code generation and is multi-threaded.
 
 ### mesa-amber
 
-`mesa-amber` is the legacy Mesa package which includes the classic (non-Gallium3D) drivers for older hardware:
+`mesa-amber`  بستهٔ قدیمی Mesa است که شامل درایورهای قدیمی ((غیر از Gallium3D)) برای سخت‌افزارهای قدیمی می‌باشد:
 
-- `i830`: for Intel's Gen 2 hardware. Same binary as `i965`.
-- `i915`: for Intel's Gen 3 hardware. Same binary as `i965`.
-- `i965`: for Intel's Gen 4 to Gen 11 hardware. Officially supported by Intel.
-- `radeon`: for AMD's Radeon R100 GPUs. Same binary as `r200`.
-- `r200`: for AMD's Radeon R200 GPUs.
-- `nouveau_vieux`: for NVIDIA NV04 (Fahrenheit) to NV20 (Kelvin) GPUs.
-- `swrast`: a legacy software rasterizer.
+  * `i830`: برای سخت‌افزار نسل ۲ اینتل. از همان باینری درایور`i965`استفاده می‌کند.
+  * `i915`: برای سخت‌افزار نسل ۳ اینتل. از همان باینری درایور`i965`استفاده می‌کند.
+  * `i965`: برای سخت‌افزار نسل ۴ الی ۱۱ اینتل. به‌صورت رسمی توسط اینتل پشتیبانی می‌شود.
+  * `radeon`: برای کارت‌ گرافیک های Radeon R100 شرکت AMD. از همان باینری درایور`r200`استفاده می‌کند.
+  * `r200`: برای کارت‌‌گرافیک‌های Radeon R200 شرکت AMD.
+  * `nouveau_vieux`: برای کارت‌‌گرافیک‌های NVIDIA NV04 (Fahrenheit) تا NV20 (Kelvin).
+  * `swrast`: یک rasterizer نرم‌افزاری قدیمی.
 
-**Note:** When using Mesa, the correct driver should be selected automatically, thus no configuration is needed once the package is installed.
 
-### Proprietary Drivers
 
-- `nvidia-utils` is the proprietary driver for NVIDIA GPUs, which includes an OpenGL implementation.
-- `amdgpu-pro-oglp` (AUR) is the proprietary driver for AMD GPUs.
+**توجه** : هنگام استفاده از Mesa، راه‌انداز سازگار و مناسب به‌شکل خودکار انتخاب می‌شود؛ بنابراین پس‌از نصب بسته، نیازی به‌تنظیمات اضافی نخواهد بود.
 
-# Gaming Platforms
+# سکو های گیمینگ
 
 ## Steam
-Steam is a popular game distribution platform by Valve. 
-- for installation just install ```steam```^extra^ package.
+
+استیم یک سکوی محبوب توزیع بازی که توسط شرکت Valve طراحی شده است.
+
+  * برای نصب آن، کافیست بستهٔ `steam`extraرا نصب کنید.
+
+
 
 ## Proton
-A compatibility layer that allows Steam to run Windows games on Linux.
-We recommend installing Proton with the help of **ProtonUp-Qt**. 
+
+پروتون یک لایهٔ سازگاری است که به‌استیم اجازه می‌دهد بازی‌های ویندوزی را بر روی لینوکس اجرا کند.
+
+ما توصیه می‌کنیم که پروتون و نسخه‌های مختلف آن را به‌کمک **ProtonUp-Qt** نصب کنید.
 
 ## ProtonUp-Qt
-A graphical utility for managing and installing different versions of Proton on Steam, allowing you to choose the best version for each game.
-- for installation just install ```protonup-qt```^AUR^
 
-## Proton-GE 
-An optimized and extended version of Proton that provides better performance for running Windows games on Linux.
-We recommend installing Proton with the help of **ProtonUp-Qt**. 
+یک ابزار گرافیکی برای مدیریت و نصب نسخه‌های مختلف پروتون بر روی استیم که به شما اجازه می‌دهد نسخه‌های سازگار را برای هر بازی انتخاب کنید. برای استفاده از آن کافی‌ست بسته `protonup-qt`AUR ازطریق Paru در پارچ نصب شود.
+
+## Proton-GE
+
+یک نسخه بهینه و توسعه‌یافته از پروتون که عملکرد بهتری برای اجرای بازی‌های ویندوزی بر روی لینوکس ارائه می‌دهد.
+
+ما توصیه می‌کنیم که Proton-GE و نگارش‌های مختلف را به‌کمک **ProtonUp-Qt** نصب کنید.
+
+## Wine-GE
+
+یک نسخه بهینه‌ و توسعه‌‌یافته از Wine (لایهٔ سازگاری ویندوز برای لینوکس) که به‌صورت ویژه برای اجرای بازی‌های ویندوزی روی لینوکس طراحی شده است.
+
+  * برای نصب کافی‌ست پکیج `wine-ge-custom`AURرا نصب کنید.
+
+
 
 ## [GameMode](https://wiki.archlinux.org/title/Gamemode)
-A system utility that applies temporary optimizations to improve game performance on Linux.
-- for installation just install ```gamemode```^extra^ ```lib32-gamemode```^extra^ packages
 
-## Wine-GE 
-An optimized and extended version of Wine **(the Windows compatibility layer for Linux)** that is tailored for running Windows games on Linux.
-- for installation just install ```wine-ge-custom```^AUR^
+یک ابزار سیستمی که به‌صورت موقت بهینه‌سازی‌هایی را برای بهبود عملکرد بازی‌ها روی لینوکس اعمال می‌کند.
+
+  * برای نصب کافی‌ست بسته‌های `gamemode`extra  و `lib32-gamemode`extra  را نصب کنید.
+
+
+
 ## [Lutris](https://lutris.net/)
-An all-in-one application for installing and running Windows and Linux games on Linux, supporting tools like Wine-GE and Proton.
-- for installation just install ```lutris```^extra^
 
-### Additional Tips
--  Check **[ProtonDB](https://www.protondb.com/)** for compatibility reports and tips on running games better.
--  To set the Proton version used in Steam for a game:
-1. Right-click the game in your Steam library and select Properties.
-2. Go to the Compatibility tab.
-3. From the "Use this tool for compatibility" list, select the Proton version you want (e.g., Proton-GE).
--  To enable GameMode for a specific Steam game:
-1. Right-click the game in your Steam library and select Properties.
-2. Go to the Launch Options section.
-3. In the text box, enter gamemoderun %command%.
+یک برنامه همه‌کاره و چندمنظوره برای نصب و اجرای بازی‌های ویندوزی و لینوکسی روی لینوکس که از ابزارهایی مانند Wine-GE و پروتون پشتیبانی می‌کند.
 
-> This guide will help you take advantage of ParchLinux's powerful gaming tools, allowing for seamless installation and gameplay. For more details on each tool, please refer to the official documentation.
-> 
-{.is-success}
+### نکات اضافی
+
+  * [**ProtonDB**](https://www.protondb.com/) را برای گزارش‌های سازگاری و نکات بهبود اجرای بازی‌ها بررسی کنید.
+  * برای تنظیم نسخهٔ پروتون مورداستفاده در استیم برای یک بازی:
 
 
+  1. روی بازی در کتابخانه استیم خود راست-کلیک کرده و گزینه “Properties” را انتخاب کنید.
+  2. وارد تب "Compatibility" شوید.
+  3. از فهرست "Use this tool for compatibility"، نسخهٔ پروتون مورد نظر خود را انتخاب کنید ((مثلا Proton-GE)).
+
+
+  * برای فعال‌کردن گیم‌مود برای یک بازی خاص در استیم:
+
+
+  1. روی بازی در کتابخانه استیم خود راست-کلیک کرده و گزینه “Properties” را انتخاب کنید.
+  2. به بخش "Launch Options" بروید.
+  3. در تکست باکس عبارت `%gamemoderun %command` را وارد کنید.
+
+
+
+> با این راهنما، شما می‌توانید از ابزارهای کاربردی گیمینگ در پارچ لینوکس برای نصب و اجرای بازی‌ها به‌صورت یکپارچه استفاده کنید. در صورت نیاز به‌اطلاعات بیشتر، به مستندات رسمی هر ابزار مراجعه کنید.
 
